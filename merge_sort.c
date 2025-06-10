@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "include/push_swap.h"
 
-void	merge_sort(s_array middle)
+void	merge_sort(t_array middle)
 {	
-	s_array left;
+	t_array left;
 	t_array right;
 	int		i;
 	int		j;
@@ -25,38 +25,39 @@ void	merge_sort(s_array middle)
 	{
 		left.length = middle.length / 2;
 		right.length = middle.length / 2 + middle.length % 2;
-		left.string = malloc(left.length * sizeof(int));
-		right.string = malloc(right.length * sizeof(int));
-		if (!left.string || !right.string)
-			return (NULL);
+		left.array = malloc(left.length * sizeof(int));
+		right.array = malloc(right.length * sizeof(int));
+		if (!left.array || !right.array)
+			return ;
 		while (i < left.length)
-			left.string[i] = middle.string[i++];
+			left.array[j++] = middle.array[i++];
+		j = 0;
 		while (i < right.length)
-			left.string[j++] = middle.string[i++];
+			right.array[j++] = middle.array[i++];
 		merge_sort(left);
 		merge_sort(right);
 		merge(left, middle, right);
 	}
 }
 
-int		main(s_array left, s_array middle, s_array right)
+void		merge(t_array left, t_array middle, t_array right)
 {
-	int		l_len;
-	int		m_len;
-	int		r_len;
+	int		l;
+	int		m;
+	int		r;
 
 	l = 0;
 	m = 0;
 	r = 0;
-	while (m_len < middle.length)
+	while (m < middle.length)
 	{
-		if (l < left.length && left.string[l] < right.string[r])
-			middle.string[m++] = left.string[l++];
-		else if (r < right.length && right.string[r] < left.string[l])
-			middle.string[m++] = right.string[r++];
+		if (l < left.length && left.array[l] < right.array[r])
+			middle.array[m++] = left.array[l++];
+		else if (r < right.length && right.array[r] < left.array[l])
+			middle.array[m++] = right.array[r++];
 		else if (l < left.length && r >= right.length)
-			middle.string[m++] = left.string[l++];
-		else if (r < right.length && l > left.length)
-			middle.string[m++] = right.string[r++];
+			middle.array[m++] = left.array[l++];
+		else if (r < right.length && l >= left.length)
+			middle.array[m++] = right.array[r++];
 	}
 }

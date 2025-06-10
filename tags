@@ -5,7 +5,8 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 LIBFT_H	include/libft/include/libft.h	14;"	d
-PUSH_SWAP_H	push_swap.h	14;"	d
+PUSH_SWAP_H	include/push_swap.h	14;"	d
+array	include/push_swap.h	/^	int 	*array;$/;"	m	struct:s_array
 calculate_length	include/libft/srcs/ft_itoa.c	/^static int	calculate_length(int n)$/;"	f	file:
 content	include/libft/include/libft.h	/^	void			*content;$/;"	m	struct:s_list
 ft_atoi	include/libft/srcs/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
@@ -57,17 +58,16 @@ ft_strtrim	include/libft/srcs/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, ch
 ft_substr	include/libft/srcs/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
 ft_tolower	include/libft/srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
-length	push_swap.h	/^	size_t	length;$/;"	m	struct:s_array
-main	merge_sort.c	/^int		main(s_array left, s_array middle, s_array right)$/;"	f
+length	include/push_swap.h	/^	int		length;$/;"	m	struct:s_array
 main	mergesort.c	/^int	main(int argc, char **argv)$/;"	f
 main	push_swap.c	/^int		main(int argc, char **argv)	$/;"	f
-merge_sort	merge_sort.c	/^void	merge_sort(s_array middle)$/;"	f
+merge_sort	merge_sort.c	/^void	merge_sort(t_array middle)$/;"	f
+merge	merge_sort.c	/^void		merge(t_array left, t_array middle, t_array right)$/;"	f
 merge	mergesort.c	/^void	merge(char **left, char **middle, char **right,int ll, int ml, int rl)$/;"	f
 mergesort	mergesort.c	/^void	mergesort(char **middle, int size)$/;"	f
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 populate_array	include/libft/srcs/ft_itoa.c	/^static char	*populate_array(char *array, int i, int n)$/;"	f	file:
-s_array	push_swap.h	/^typedef struct s_array$/;"	s
+s_array	include/push_swap.h	/^typedef struct s_array$/;"	s
 s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
-string	push_swap.h	/^	int 	*string;$/;"	m	struct:s_array
-t_array	push_swap.h	/^}	t_array;$/;"	t	typeref:struct:s_array
+t_array	include/push_swap.h	/^}	t_array;$/;"	t	typeref:struct:s_array
 t_list	include/libft/include/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list

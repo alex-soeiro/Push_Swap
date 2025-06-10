@@ -1,7 +1,7 @@
 syn keyword CTagsStructure s_list s_array
-syn keyword CTagsMember next string length content
-syn keyword CTagsFunction ft_tolower ft_memset ft_isascii ft_isalnum ft_itoa ft_strcmp ft_lstclear ft_strncmp ft_strchr merge_sort ft_lstadd_front ft_atoi ft_lstadd_back main ft_strtrim ft_isalpha merge ft_clear ft_strdup ft_lstmap ft_memchr ft_substr ft_memcmp ft_putchar_fd ft_bzero ft_strcpy ft_split ft_strjoin calculate_length ft_lstsize ft_putstr_fd ft_putnbr_fd ft_striteri ft_memcpy ft_populate ft_isdigit ft_toupper ft_strnstr ft_memmove ft_isprint ft_strmapi ft_strlcpy populate_array ft_lstiter
-syn keyword CTagsFunction ft_putendl_fd mergesort ft_calloc ft_countwords ft_encrypt ft_lstdelone ft_lstlast ft_strrchr ft_strlcat ft_strlen ft_lstnew
+syn keyword CTagsMember next content array length
+syn keyword CTagsFunction ft_isalnum ft_strcmp ft_strrchr ft_putchar_fd ft_lstdelone ft_strchr ft_strlcpy ft_strlcat ft_substr ft_putstr_fd main ft_toupper ft_memset ft_putendl_fd ft_memcmp merge ft_isdigit ft_lstmap ft_isalpha populate_array ft_strnstr ft_countwords ft_atoi ft_lstnew ft_putnbr_fd ft_lstiter ft_lstlast ft_strjoin ft_calloc merge_sort ft_strdup ft_strlen ft_strtrim ft_split calculate_length ft_lstsize ft_isascii ft_clear ft_memcpy mergesort ft_populate ft_memmove ft_bzero ft_itoa
+syn keyword CTagsFunction ft_lstadd_back ft_tolower ft_encrypt ft_lstadd_front ft_isprint ft_strncmp ft_strcpy ft_strmapi ft_striteri ft_lstclear ft_memchr
 syn keyword CTagsType t_list t_array
-syn keyword CTagsDefinedName LIBFT_H PUSH_SWAP_H
+syn keyword CTagsDefinedName PUSH_SWAP_H LIBFT_H
 

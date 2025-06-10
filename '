@@ -34,9 +34,8 @@ int		main(int argc, char **argv)
 	t_array middle;
 	
 	i = 1;
-	j = 0;
-	middle.length = argc - 1;
-	middle.array = malloc((argc - 1) * sizeof(int));
+	middle.length = argc;
+	middle.array = malloc(argc - 1 * sizeof(int));
 	while (i < argc)
 		middle.array[j++] = ft_atoi(argv[i++]);
 	i = 0;
