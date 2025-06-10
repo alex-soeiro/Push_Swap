@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 15:55:52 by avieira-         ###   ########.fr       */
+/*   Created: 2025/04/15 21:40:14 by jesusoncrac       #+#    #+#             */
+/*   Updated: 2025/04/15 21:42:37 by jesusoncrac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft.h"
+#include "../include/libft.h"
 
-/* PUSH SWAP
-
-Operations:
-	1. Receive "stack a";
-	2. TO BE DECIDED */
-
-/* MAIN
-
-Operations:
-	1. Create "stack a".
-	2. Call push_swap sorting function. */
-
-
-int		main(int argc, char **argv)	
+void	ft_putendl_fd(char *s, int fd)
 {
-	
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

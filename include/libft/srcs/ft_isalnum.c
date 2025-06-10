@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 15:55:52 by avieira-         ###   ########.fr       */
+/*   Created: 2025/04/08 22:09:36 by avieira-          #+#    #+#             */
+/*   Updated: 2025/04/10 15:55:02 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft.h"
+#include "../include/libft.h"
 
-/* PUSH SWAP
-
-Operations:
-	1. Receive "stack a";
-	2. TO BE DECIDED */
-
-/* MAIN
-
-Operations:
-	1. Create "stack a".
-	2. Call push_swap sorting function. */
-
-
-int		main(int argc, char **argv)	
+int	ft_isalnum(int c)
 {
-	
+	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
+		return (1);
+	return (0);
 }

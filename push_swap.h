@@ -13,10 +13,13 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+void	merge_sort(s_array middle);
+void	merge(s_array left, s_array middle, s_array right);
+
 typedef struct s_array
 {
-	int 	*array;
-	size_t	size;
+	int 	*string;
+	size_t	length;
 }	t_array;
 
 #endif

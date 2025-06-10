@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 15:55:52 by avieira-         ###   ########.fr       */
+/*   Created: 2025/04/09 19:05:12 by avieira-          #+#    #+#             */
+/*   Updated: 2025/04/14 07:58:14 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft.h"
-
-/* PUSH SWAP
-
-Operations:
-	1. Receive "stack a";
-	2. TO BE DECIDED */
-
-/* MAIN
-
-Operations:
-	1. Create "stack a".
-	2. Call push_swap sorting function. */
-
-
-int		main(int argc, char **argv)	
+int	ft_tolower(int c)
 {
-	
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
 }

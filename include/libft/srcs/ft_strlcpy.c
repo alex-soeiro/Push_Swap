@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 15:55:52 by avieira-         ###   ########.fr       */
+/*   Created: 2025/04/14 14:32:49 by avieira-          #+#    #+#             */
+/*   Updated: 2025/04/14 15:29:03 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft.h"
+#include "../include/libft.h"
 
-/* PUSH SWAP
-
-Operations:
-	1. Receive "stack a";
-	2. TO BE DECIDED */
-
-/* MAIN
-
-Operations:
-	1. Create "stack a".
-	2. Call push_swap sorting function. */
-
-
-int		main(int argc, char **argv)	
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	
+	size_t			i;
+	size_t			len;
+	unsigned char	*s;
+
+	i = 0;
+	s = (unsigned char *) src;
+	len = ft_strlen(src);
+	if (size > 0)
+	{
+		while (*s && i < size - 1)
+		{
+			*(dst++) = *(s++);
+			i++;
+		}
+		*dst = '\0';
+	}
+	return (len);
 }

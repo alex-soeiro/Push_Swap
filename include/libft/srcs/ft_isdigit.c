@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 15:55:52 by avieira-         ###   ########.fr       */
+/*   Created: 2025/04/08 19:27:22 by avieira-          #+#    #+#             */
+/*   Updated: 2025/04/10 16:15:40 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft.h"
-
-/* PUSH SWAP
-
-Operations:
-	1. Receive "stack a";
-	2. TO BE DECIDED */
-
-/* MAIN
-
-Operations:
-	1. Create "stack a".
-	2. Call push_swap sorting function. */
-
-
-int		main(int argc, char **argv)	
+int	ft_isdigit(int c)
 {
-	
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
