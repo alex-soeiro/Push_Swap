@@ -26,13 +26,12 @@ Operations:
 	1. Create "stack a".
 	2. Call push_swap sorting function. */
 
-
-int		main(int argc, char **argv)	
+int	main(int argc, char **argv)
 {
-	int 	i;
+	int		i;
 	int		j;
-	t_array middle;
-	
+	t_array	middle;
+
 	i = 1;
 	j = 0;
 	middle.length = argc - 1;

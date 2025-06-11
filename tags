@@ -42,7 +42,6 @@ ft_putnbr_fd	include/libft/srcs/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd
 ft_putstr_fd	include/libft/srcs/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
 ft_split	include/libft/srcs/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
 ft_strchr	include/libft/srcs/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
-ft_strcmp	mergesort.c	/^int	ft_strcmp(char *s1, char *s2)$/;"	f
 ft_strcpy	include/libft/srcs/ft_strdup.c	/^static char	*ft_strcpy(char *s1, char *s2)$/;"	f	file:
 ft_strdup	include/libft/srcs/ft_strdup.c	/^char	*ft_strdup(const char *src)$/;"	f
 ft_striteri	include/libft/srcs/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char*))$/;"	f
@@ -59,12 +58,9 @@ ft_substr	include/libft/srcs/ft_substr.c	/^char	*ft_substr(char const *s, unsign
 ft_tolower	include/libft/srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 length	include/push_swap.h	/^	int		length;$/;"	m	struct:s_array
-main	mergesort.c	/^int	main(int argc, char **argv)$/;"	f
-main	push_swap.c	/^int		main(int argc, char **argv)	$/;"	f
+main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f
 merge_sort	merge_sort.c	/^void	merge_sort(t_array middle)$/;"	f
-merge	merge_sort.c	/^void		merge(t_array left, t_array middle, t_array right)$/;"	f
-merge	mergesort.c	/^void	merge(char **left, char **middle, char **right,int ll, int ml, int rl)$/;"	f
-mergesort	mergesort.c	/^void	mergesort(char **middle, int size)$/;"	f
+merge	merge_sort.c	/^void	merge(t_array left, t_array middle, t_array right)$/;"	f
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 populate_array	include/libft/srcs/ft_itoa.c	/^static char	*populate_array(char *array, int i, int n)$/;"	f	file:
 s_array	include/push_swap.h	/^typedef struct s_array$/;"	s

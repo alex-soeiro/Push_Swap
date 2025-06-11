@@ -13,9 +13,9 @@
 #include "include/push_swap.h"
 
 void	merge_sort(t_array middle)
-{	
-	t_array left;
-	t_array right;
+{
+	t_array	left;
+	t_array	right;
 	int		i;
 	int		j;
 
@@ -32,7 +32,7 @@ void	merge_sort(t_array middle)
 		while (i < left.length)
 			left.array[j++] = middle.array[i++];
 		j = 0;
-		while (i < right.length)
+		while (i < middle.length)
 			right.array[j++] = middle.array[i++];
 		merge_sort(left);
 		merge_sort(right);
@@ -40,7 +40,7 @@ void	merge_sort(t_array middle)
 	}
 }
 
-void		merge(t_array left, t_array middle, t_array right)
+void	merge(t_array left, t_array middle, t_array right)
 {
 	int		l;
 	int		m;
@@ -51,9 +51,9 @@ void		merge(t_array left, t_array middle, t_array right)
 	r = 0;
 	while (m < middle.length)
 	{
-		if (l < left.length && left.array[l] < right.array[r])
+		if (l < left.length && left.array[l] <= right.array[r])
 			middle.array[m++] = left.array[l++];
-		else if (r < right.length && right.array[r] < left.array[l])
+		else if (r < right.length && right.array[r] <= left.array[l])
 			middle.array[m++] = right.array[r++];
 		else if (l < left.length && r >= right.length)
 			middle.array[m++] = left.array[l++];
