@@ -1,7 +1,7 @@
-syn keyword CTagsStructure s_list s_node s_array s_stack
-syn keyword CTagsMember array head length number size content prev tail next
-syn keyword CTagsFunction ft_bzero ft_lstdelone ft_printstr ft_writeline ft_nlen ft_printadd ft_putstr_fd calculate_length ft_readline ft_strcpy get_next_line ft_strdup ft_lstadd_back ft_split ft_memset ft_isprint merge ft_putnbr_fd ft_putchar_fd ft_tolower ft_isalpha ft_strlen ft_memcpy ft_toupper ft_lstnew ft_lstlast ft_memchr ft_printhex ft_strchr ft_strtrim ft_atoi ft_countwords ft_lstmap arg_parse merge_sort populate_array ft_lstadd_front ft_strncmp ft_clear ft_putendl_fd ft_lstiter ft_populate
-syn keyword CTagsFunction ft_printchar ft_strnstr ft_printarg ft_printf ft_encrypt ft_calloc ft_printunsign_nbr ft_strjoin ft_lstsize main ft_isalnum ft_strlcat ft_itoa ft_substr ft_isdigit ft_isascii ft_striteri ft_strmapi ft_strrchr ft_lstclear ft_printnbr ft_strlcpy ft_memmove ft_found_newline ft_removeline ft_memcmp
-syn keyword CTagsType t_list t_node t_array t_stack
-syn keyword CTagsDefinedName BUFFER_SIZE LIBFT_H PUSH_SWAP_H
+syn keyword CTagsStructure s_stack s_node s_array s_list
+syn keyword CTagsMember size head array number next length prev tail content
+syn keyword CTagsFunction ft_found_newline ft_memset ft_populate ft_calloc ft_memchr ft_printarg ft_printadd ft_nlen ft_memmove ft_putnbr_fd ft_striteri ft_strtrim merge populate_array ft_strlcat ft_lstiter get_next_line ft_itoa ft_isspace ft_strnstr main ft_memcpy ft_printnbr ft_strrchr ft_isalpha ft_readline ft_lstnew ft_isdigit ft_strcpy merge_sort ft_toupper ft_clear ft_isascii ft_printstr ft_putendl_fd ft_removeline ft_strlen ft_bzero ft_split is_only_numbers ft_writeline ft_isalnum calculate_length
+syn keyword CTagsFunction ft_encrypt ft_lstadd_back ft_printhex ft_printunsign_nbr ft_atoi ft_printchar ft_lstlast ft_lstdelone ft_putchar_fd ft_strjoin ft_printf ft_countwords ft_isprint ft_lstmap ft_strchr ft_substr ft_putstr_fd ft_lstadd_front ft_tolower ft_lstsize ft_memcmp ft_strmapi ft_lstclear arg_parse ft_strlcpy ft_strncmp ft_strdup split_args
+syn keyword CTagsType t_list t_node t_stack t_array
+syn keyword CTagsDefinedName LIBFT_H PUSH_SWAP_H BUFFER_SIZE
 

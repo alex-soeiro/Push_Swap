@@ -30,6 +30,7 @@ ft_isalpha	include/libft/srcs/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref
 ft_isascii	include/libft/srcs/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
 ft_isdigit	include/libft/srcs/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
 ft_isprint	include/libft/srcs/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
+ft_isspace	include/libft/srcs/ft_isspace.c	/^int	ft_isspace(char c)$/;"	f	typeref:typename:int
 ft_itoa	include/libft/srcs/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
 ft_lstadd_back	include/libft/srcs/ft_lstadd_back_bonus.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
 ft_lstadd_front	include/libft/srcs/ft_lstadd_front_bonus.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
@@ -81,8 +82,9 @@ ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref
 ft_writeline	include/libft/srcs/get_next_line.c	/^char	*ft_writeline(char *line, char *buf)$/;"	f	typeref:typename:char *
 get_next_line	include/libft/srcs/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
 head	include/push_swap.h	/^	int		*head;$/;"	m	struct:s_stack	typeref:typename:int *
+is_only_numbers	push_swap.c	/^int	is_only_numbers(char **)$/;"	f	typeref:typename:int
 length	include/push_swap.h	/^	int		length;$/;"	m	struct:s_array	typeref:typename:int
-main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:char ** int
+main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
 merge_sort	merge_sort.c	/^void	merge_sort(t_array middle)$/;"	f	typeref:typename:void
 merge	merge_sort.c	/^void	merge(t_array left, t_array middle, t_array right)$/;"	f	typeref:typename:void
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
@@ -95,6 +97,7 @@ s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
 s_node	include/push_swap.h	/^typedef struct s_node$/;"	s
 s_stack	include/push_swap.h	/^typedef struct s_stack$/;"	s
 size	include/push_swap.h	/^	int		size;$/;"	m	struct:s_stack	typeref:typename:int
+split_args	push_swap.c	/^char	**split_args(char **argv, int argc)$/;"	f	typeref:typename:char **
 t_array	include/push_swap.h	/^}	t_array;$/;"	t	typeref:struct:s_array
 t_list	include/libft/include/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
 t_node	include/push_swap.h	/^}	t_node;$/;"	t	typeref:struct:s_node
