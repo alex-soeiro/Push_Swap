@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/11 20:59:21 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/12 16:15:20 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ Operations:
 	1. Create "stack a".
 	2. Call push_swap sorting function. */
 
+/*
 char	*generate_stack(char **numbers)
 {
-}
+} */
 
 void	arg_parse(char **arg)
 {
@@ -47,39 +48,76 @@ void	arg_parse(char **arg)
 	/* if a double number is found, print "Error\n" */
 }
 
+char	**split_args(char **argv, int argc)
+{
+	int		i;
+	char	*args;
+	char	*tmp;
+	char	**split;
+
+	i = 0;
+	args = ft_strdup(" ");
+	while (i < argc)
+	{
+		tmp = args;
+		args = ft_strjoin(args, argv[i]);
+		free (tmp);
+		tmp = args;
+		args = ft_strjoin(args, " ");
+		free(tmp);
+		i++;
+	}
+	split = ft_split(args, ' ');
+	return(free(args), split);
+}
+
+int	is_only_numbers(char **)
+{
+	int	i;
+
+	i = 0;
+	while (numbers[i])
+	{
+		// ignore spaces
+
+		// if theres a char other than a number and a sign
+			// return error
+
+		// check if theres a sign or multiple signs
+		
+		// if theres a char other than a number and a sign
+			// return error
+
+		// check if theres a number
+
+		// if theres a char other than a number and a sign
+			// return error
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	int		i;
-	char	space;
-	char	*args;
-	char	*numbers;
-	char	*tmp;
+	char	**numbers;
 
-	// PLACE THIS IN A SEPERATE FUNCTION (join_args)
-	i = 1;
-	space = ' ';
-	args = ft_strdup(" ");;
-	numbers = "";
+	i = 0;
 	if (argc == 1)
-		ft_printf("No arguments given");
-	
-	if (argc > 2)
 	{
-		while (i < argc)
+		ft_printf("No arguments given");
+		return (1);
+	}
+	if (argc > 1)
+	{
+		numbers = split_args(argv, argc);
+		while (numbers[i])
 		{
-			tmp = args;
-			args = ft_strjoin(args, space);
-			free (tmp);
-			tmp = args;
-			args = ft_strjoin(args, argv[i]);
-			free(tmp);
-			i++;
+			ft_printf("%s, ", numbers[i]);
+			free(numbers[i++]);
 		}
-		numbers = ft_split(numbers, space);
+		free(numbers);
 	}
 	// Parse the argument given
 }
-
 
 /* int	main(int argc, char **argv)
    {

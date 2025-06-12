@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:40:52 by avieira-          #+#    #+#             */
-/*   Updated: 2025/04/21 10:21:37 by jesusoncrac      ###   ########.fr       */
+/*   Updated: 2025/06/12 13:35:35 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,42 @@
 # define LIBFT_H
 
 # include <stddef.h>
-# include <locale.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
 # include <stdint.h>
+# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 3
+# endif
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+/* FT_PRINTF */
+
+int     ft_printchar(char c);
+int     ft_printstr(char *str);
+int     ft_printnbr(int nbr);
+int     ft_printunsign_nbr(unsigned int nbr);
+int     ft_printhex(unsigned long nbr, char c);
+int     ft_printadd(void *ptr);
+int     ft_printf(const char *format, ...);
+
+/* GET_NEXT_LINE */
+
+int     ft_found_newline(char *line);
+int     ft_nlen(char *str);
+char    *get_next_line(int fd);
+char    *ft_readline(int fd, char *buf, char *line);
+char    *ft_writeline(char *line, char *buf);
+void    ft_removeline(char *buf);
+void    ft_bzero(void *s, size_t n);
+void    *ft_calloc(size_t nmemb, size_t size);
 
 /* MEMORY */
 

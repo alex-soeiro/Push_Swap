@@ -6,7 +6,7 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/21 12:18:39 by avieira-          #+#    #+#              #
-#    Updated: 2025/04/21 13:06:02 by avieira-         ###   ########.fr        #
+#    Updated: 2025/06/12 12:05:55 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,13 +21,15 @@ SRCS += srcs/ft_strlcat.c srcs/ft_itoa.c srcs/ft_strdup.c srcs/ft_strncmp.c
 SRCS += srcs/ft_memcmp.c srcs/ft_calloc.c srcs/ft_substr.c srcs/ft_strjoin.c
 SRCS += srcs/ft_strmapi.c srcs/ft_striteri.c srcs/ft_putchar_fd.c 
 SRCS += srcs/ft_putstr_fd.c srcs/ft_toupper.c srcs/ft_strlcpy.c srcs/ft_memchr.c
-SRCS += srcs/ft_putnbr_fd.c
-BONUS = srcs/ft_lstnew_bonus.c srcs/ft_lstdelone_bonus.c
-BONUS += srcs/ft_lstsize_bonus.c srcs/ft_lstlast_bonus.c
-BONUS += srcs/ft_lstadd_back_bonus.c srcs/ft_lstadd_front_bonus.c
-BONUS += srcs/ft_lstclear_bonus.c srcs/ft_lstiter_bonus.c srcs/ft_lstmap_bonus.c
+SRCS += srcs/ft_putnbr_fd.c srcs/ft_printf.c srcs/ft_printadd.c
+SRCS += srcs/ft_printchar.c srcs/ft_printhex.c srcs/ft_printnbr.c
+SRCS += srcs/ft_printunsign_nbr.c srcs/ft_printstr.c
+SRCS += srcs/ft_lstnew_bonus.c srcs/ft_lstdelone_bonus.c
+SRCS += srcs/ft_lstsize_bonus.c srcs/ft_lstlast_bonus.c
+SRCS += srcs/ft_lstadd_back_bonus.c srcs/ft_lstadd_front_bonus.c
+SRCS += srcs/ft_lstclear_bonus.c srcs/ft_lstiter_bonus.c srcs/ft_lstmap_bonus.c
+SRCS += srcs/get_next_line.c srcs/get_next_line_utils.c
 OBJS = $(SRCS:.c=.o)
-B_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -44,9 +46,3 @@ fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
-
-bonus: .bonus
-
-.bonus: ${NAME} ${B_OBJS} 
-		ar rc ${NAME} ${B_OBJS}
-		touch .bonus
