@@ -38,7 +38,7 @@ char	**split_args(char **argv, int argc)
 	char	*tmp;
 	char	**split;
 
-	i = 0;
+	i = 1;
 	args = ft_strdup(" ");
 	while (i < argc)
 	{
@@ -54,28 +54,46 @@ char	**split_args(char **argv, int argc)
 	return(free(args), split);
 }
 
-int	is_only_numbers(char **)
+int	is_only_numbers(char **nums)
+{
+	int	i;
+	int	j;
+	int	num_len;
+
+	i = 0;
+	while (nums[i])
+	{
+		j = 0;
+		num_len = ft_strlen(nums[i]);
+		// check while theres a sign or multiple signs
+		while (j < num_len && nums[i][j] && ft_issign(nums[i][j]))
+			j++;
+		// check while if theres a number
+		while (j < num_len && ft_isdigit(nums[i][j]))
+			j++;
+		// if theres a char other than a number
+		if (j < num_len || !ft_isdigit(nums[i][j - 1]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	is_repeated_number(char **nums)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (nums[i])
 	{
-		// if theres a char other than a number and a sign
-			// return error
-		if (nums[i][j] != '-' && nums[i][j] != '+' && !ft_isdigit(nums[i][j])
-				
-
-		// check while theres a sign or multiple signs
-
-		// check if theres a number
-		if (!ft_isdigit(nums[i][j]))
-
-		// if theres a char other than a number and a sign
-			// return error
+		j = 0;
+		while (j < i)
+			if (!ft_strcmp(nums[i], nums[j++]))
+					return (0);
+		i++;
 	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
@@ -90,18 +108,19 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	if (argc > 1)
-	{
 		nums = split_args(argv, argc);
-		while (nums[i])
-		{
-			ft_printf("%s, ", nums[i]);
-			free(nums[i++]);
-		}
-		free(nums);
-	}
 	// Parse the argument given
 	if (!is_only_numbers(nums))
-		return ("Error\n");
+		return (error_message(1));
+	if (!is_repeated_number(nums))
+		return (error_message(2));
+	i = 0;
+	while (nums[i])
+	{
+		ft_printf("%s, ", nums[i]);
+		free(nums[i++]);
+	}
+	free(nums);
 }
 
 /* int	main(int argc, char **argv)

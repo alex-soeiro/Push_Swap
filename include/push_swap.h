@@ -37,5 +37,6 @@ typedef struct s_stack
 
 void	merge_sort(t_array middle);
 void	merge(t_array left, t_array middle, t_array right);
+int		error_message(int error_code);
 
 #endif

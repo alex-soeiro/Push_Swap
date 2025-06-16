@@ -1,7 +1,7 @@
-syn keyword CTagsStructure s_stack s_node s_array s_list
-syn keyword CTagsMember size head array number next length prev tail content
-syn keyword CTagsFunction ft_found_newline ft_memset ft_populate ft_calloc ft_memchr ft_printarg ft_printadd ft_nlen ft_memmove ft_putnbr_fd ft_striteri ft_strtrim merge populate_array ft_strlcat ft_lstiter get_next_line ft_itoa ft_isspace ft_strnstr main ft_memcpy ft_printnbr ft_strrchr ft_isalpha ft_readline ft_lstnew ft_isdigit ft_strcpy merge_sort ft_toupper ft_clear ft_isascii ft_printstr ft_putendl_fd ft_removeline ft_strlen ft_bzero ft_split is_only_numbers ft_writeline ft_isalnum calculate_length
-syn keyword CTagsFunction ft_encrypt ft_lstadd_back ft_printhex ft_printunsign_nbr ft_atoi ft_printchar ft_lstlast ft_lstdelone ft_putchar_fd ft_strjoin ft_printf ft_countwords ft_isprint ft_lstmap ft_strchr ft_substr ft_putstr_fd ft_lstadd_front ft_tolower ft_lstsize ft_memcmp ft_strmapi ft_lstclear arg_parse ft_strlcpy ft_strncmp ft_strdup split_args
-syn keyword CTagsType t_list t_node t_stack t_array
-syn keyword CTagsDefinedName LIBFT_H PUSH_SWAP_H BUFFER_SIZE
+syn keyword CTagsStructure s_stack s_array s_node s_list
+syn keyword CTagsMember number array length head prev next content tail
+syn keyword CTagsFunction ft_strjoin ft_bzero is_only_numbers ft_printchar merge_sort ft_split ft_isalpha ft_removeline ft_strrchr ft_countwords ft_printnbr ft_nlen ft_toupper main ft_writeline ft_strlen ft_strlcpy ft_isdigit ft_isprint ft_itoa ft_lstiter ft_strmapi merge ft_found_newline ft_printadd ft_printarg ft_issign ft_printstr ft_lstmap ft_putnbr_fd ft_strncmp ft_readline ft_strnstr ft_tolower ft_printf ft_putchar_fd ft_isascii ft_lstadd_back ft_lstclear ft_memchr ft_strtrim ft_clear ft_strchr
+syn keyword CTagsFunction ft_calloc ft_memmove ft_encrypt ft_strcpy ft_memcpy get_next_line split_args ft_strdup ft_substr ft_memset ft_lstlast ft_printhex populate_array ft_isalnum ft_striteri ft_lstdelone ft_memcmp ft_lstsize calculate_length ft_lstnew error_msg ft_atoi ft_printunsign_nbr ft_putendl_fd ft_putstr_fd ft_isspace ft_populate ft_strlcat ft_lstadd_front
+syn keyword CTagsType t_stack t_array t_node t_list
+syn keyword CTagsDefinedName LIBFT_H BUFFER_SIZE PUSH_SWAP_H
 

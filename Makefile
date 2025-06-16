@@ -10,6 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
+compile: libft
+	cc push_swap.c error_message.c include/libft/libft.a -g
+
 libft:
 	make -C include/libft/
 
