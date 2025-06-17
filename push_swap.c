@@ -102,25 +102,29 @@ int	main(int argc, char **argv)
 	char	**nums;
 
 	i = 0;
+	// if no arguments given
 	if (argc == 1)
-	{
-		ft_printf("No arguments given");
-		return (1);
-	}
-	if (argc > 1)
-		nums = split_args(argv, argc);
-	// Parse the argument given
-	if (!is_only_numbers(nums))
 		return (error_message(1));
-	if (!is_repeated_number(nums))
+
+	// if arguments given
+	nums = split_args(argv, argc);
+
+	// Parse the arguments given
+	if (!is_only_numbers(nums))
 		return (error_message(2));
-	i = 0;
+
+	// Check if every number is unique
+	if (!is_repeated_number(nums))
+		return (error_message(3));
+
+	// Create stack a
+	
+
+	// Free the allocated memory for nums
 	while (nums[i])
-	{
-		ft_printf("%s, ", nums[i]);
-		free(nums[i++]);
-	}
-	free(nums);
+		ft_printf("%s, ", nums[i++]);
+	ft_free_matrix(nums);
+	i = 0;
 }
 
 /* int	main(int argc, char **argv)

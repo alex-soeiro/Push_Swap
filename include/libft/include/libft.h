@@ -53,6 +53,7 @@ void    *ft_calloc(size_t nmemb, size_t size);
 
 /* MEMORY */
 
+void	ft_free_matrix(char **matrix);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
