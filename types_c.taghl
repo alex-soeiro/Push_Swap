@@ -1,7 +1,7 @@
 syn keyword CTagsStructure s_doublylist s_array s_list
-syn keyword CTagsMember prev array next length content
-syn keyword CTagsFunction get_next_line error_message ft_nlen ft_lstadd_front ft_strdup ft_tolower ft_strjoin ft_isspace ft_strlcat ft_removeline ft_strrchr ft_free_matrix ft_encrypt ft_isalpha ft_printf ft_putstr_fd ft_bzero ft_lstsize ft_strncmp ft_printadd ft_lstadd_back merge is_repeated_number ft_strlcpy ft_isdigit ft_putnbr_fd ft_isalnum ft_lstclear ft_itoa ft_memcpy ft_memset ft_printunsign_nbr ft_printarg ft_strchr ft_strtrim ft_countwords ft_putendl_fd populate_array merge_sort ft_clear
-syn keyword CTagsFunction ft_readline ft_populate ft_strcpy ft_striteri ft_strnstr ft_isascii ft_memchr calculate_length ft_lstnew ft_printchar ft_printstr ft_issign ft_atoi ft_strlen ft_lstmap ft_printhex is_only_numbers ft_lstlast main ft_putchar_fd ft_isprint ft_substr ft_strcmp ft_writeline ft_memmove ft_memcmp ft_lstiter ft_split ft_strmapi split_args ft_calloc ft_printnbr ft_toupper ft_lstdelone ft_found_newline
-syn keyword CTagsType t_array t_doublylist t_list
-syn keyword CTagsDefinedName BUFFER_SIZE LIBFT_H PUSH_SWAP_H
+syn keyword CTagsMember next content length array prev
+syn keyword CTagsFunction ft_lstmap ft_lstadd_front ft_encrypt ft_striteri ft_memchr ft_bzero ft_lstsize ft_printnbr ft_printf ft_putnbr_fd ft_lstadd_back ft_printchar ft_memmove merge_sort main ft_clear ft_lstnew ft_strcmp ft_calloc ft_removeline merge ft_lstdelone ft_strrchr ft_strncmp ft_free_matrix ft_substr ft_printarg ft_lstclear ft_printunsign_nbr ft_memcpy ft_strtrim ft_countwords split_args ft_lstiter ft_populate ft_toupper ft_tolower ft_memset is_only_numbers ft_printstr ft_isdigit ft_nlen
+syn keyword CTagsFunction error_message ft_dblylst_new ft_strlcpy ft_found_newline ft_split ft_memcmp ft_putstr_fd ft_strjoin ft_isalnum ft_isalpha ft_atoi populate_array ft_isprint ft_strmapi calculate_length ft_isspace ft_isascii ft_strlcat ft_dblylst_addback ft_writeline ft_putchar_fd ft_putendl_fd ft_strcpy is_repeated_number ft_itoa ft_lstlast ft_printadd ft_issign ft_readline ft_strnstr ft_strdup ft_printhex get_next_line ft_strchr ft_strlen
+syn keyword CTagsType t_array t_list t_doublylist
+syn keyword CTagsDefinedName BUFFER_SIZE PUSH_SWAP_H LIBFT_H
 
