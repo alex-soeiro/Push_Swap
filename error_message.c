@@ -2,7 +2,7 @@
 #include "include/push_swap.h"
 #include "include/libft/include/libft.h"
 
-int	error_message(int	error_code)
+int	error_message(int error_code)
 {
 	if (error_code == 1)
 	{

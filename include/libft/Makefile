@@ -6,7 +6,7 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/21 12:18:39 by avieira-          #+#    #+#              #
-#    Updated: 2025/06/12 17:08:35 by avieira-         ###   ########.fr        #
+#    Updated: 2025/06/18 14:50:29 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS += srcs/ft_putstr_fd.c srcs/ft_toupper.c srcs/ft_strlcpy.c srcs/ft_memchr.c
 SRCS += srcs/ft_putnbr_fd.c srcs/ft_printf.c srcs/ft_printadd.c
 SRCS += srcs/ft_printchar.c srcs/ft_printhex.c srcs/ft_printnbr.c
 SRCS += srcs/ft_printunsign_nbr.c srcs/ft_printstr.c srcs/ft_issign.c
-SRCS += srcs/ft_free_matrix.c
+SRCS += srcs/ft_free_matrix.c srcs/merge_sort.c
 SRCS += srcs/ft_lstnew_bonus.c srcs/ft_lstdelone_bonus.c srcs/ft_strcmp.c
 SRCS += srcs/ft_lstsize_bonus.c srcs/ft_lstlast_bonus.c
 SRCS += srcs/ft_lstadd_back_bonus.c srcs/ft_lstadd_front_bonus.c

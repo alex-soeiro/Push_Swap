@@ -6,11 +6,11 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 20:35:26 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/11 15:04:08 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/18 14:51:30 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/libft.h"
 
 void	merge_sort(t_array middle)
 {

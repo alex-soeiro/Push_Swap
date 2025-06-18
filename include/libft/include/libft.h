@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:40:52 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/12 17:09:15 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/18 14:49:27 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,25 @@
 #  define BUFFER_SIZE 3
 # endif
 
+typedef struct s_array
+{
+	int				*array;
+	int				length;
+}	t_array;
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
+
+typedef struct s_doublylist
+{
+	void				*content;
+	struct s_doublylist *prev;
+	struct s_doublylist *next;
+}	t_doublylist;
+
 
 /* FT_PRINTF */
 
@@ -50,6 +64,11 @@ char    *ft_writeline(char *line, char *buf);
 void    ft_removeline(char *buf);
 void    ft_bzero(void *s, size_t n);
 void    *ft_calloc(size_t nmemb, size_t size);
+
+/* SORTING */
+
+void	merge_sort(t_array middle);
+void	merge(t_array left, t_array middle, t_array right);
 
 /* MEMORY */
 

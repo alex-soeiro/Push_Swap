@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/12 17:48:44 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/18 15:04:37 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,18 +104,18 @@ int	main(int argc, char **argv)
 	i = 0;
 	// if no arguments given
 	if (argc == 1)
-		return (error_message(1));
+		return (ft_free_matrix(nums), error_message(1));
 
 	// if arguments given
 	nums = split_args(argv, argc);
 
 	// Parse the arguments given
 	if (!is_only_numbers(nums))
-		return (error_message(2));
+		return (ft_free_matrix(nums), error_message(2));
 
 	// Check if every number is unique
 	if (!is_repeated_number(nums))
-		return (error_message(3));
+		return (ft_free_matrix(nums), error_message(3));
 
 	// Create stack a
 	
@@ -126,22 +126,22 @@ int	main(int argc, char **argv)
 	ft_free_matrix(nums);
 	i = 0;
 }
+/*
+int	main(int argc, char **argv)
+{
+	int		i;
+	int		j;
+	t_array	middle;
 
-/* int	main(int argc, char **argv)
-   {
-   int		i;
-   int		j;
-   t_array	middle;
-
-   i = 1;
-   j = 0;
-   middle.length = argc - 1;
-   middle.array = malloc((argc - 1) * sizeof(int));
-   while (i < argc)
-   middle.array[j++] = ft_atoi(argv[i++]);
-   i = 0;
-   merge_sort(middle);
-   while (i < argc - 1)
-   printf("%i, ", middle.array[i++]);
-   free(middle.array);
-   }*/
+	i = 1;
+	j = 0;
+	middle.length = argc - 1;
+	middle.array = malloc((argc - 1) * sizeof(int));
+	while (i < argc)
+		middle.array[j++] = ft_atoi(argv[i++]);
+	i = 0;
+	merge_sort(middle);
+	while (i < argc - 1)
+		printf("%i, ", middle.array[i++]);
+	free(middle.array);
+}*/

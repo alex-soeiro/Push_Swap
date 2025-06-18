@@ -1,21 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_dblylst_new.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/18 15:01:40 by avieira-         ###   ########.fr       */
+/*   Created: 2025/06/18 14:36:36 by avieira-          #+#    #+#             */
+/*   Updated: 2025/06/18 14:40:23 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../include/libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
-
-int		error_message(int error_code);
-
-#endif
+ft_dblylst_new
