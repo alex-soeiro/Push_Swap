@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:40:52 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/18 14:49:27 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/18 16:33:02 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
-/* LISTS */
+/* LIST */
 
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -139,5 +139,11 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* DOUBLY LIST */
+
+void			ft_dblylst_addback(t_doublylist **dblylst, t_doublylist *new);
+t_doublylist    ft_dblylst_new(void *content);
+t_doublylist	ft_dblyst_last(t_doublylist *dblylst);
 
 #endif

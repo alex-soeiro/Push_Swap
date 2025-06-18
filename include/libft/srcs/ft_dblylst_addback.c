@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dblylst_new.c                                   :+:      :+:    :+:   */
+/*   ft_dblylst_addback.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 14:36:36 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/18 15:30:37 by avieira-         ###   ########.fr       */
+/*   Created: 2025/06/18 15:40:18 by avieira-          #+#    #+#             */
+/*   Updated: 2025/06/18 15:48:33 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "../include/libft.h" 
 
-t_doublylist	ft_dblylst_new(void *content)
+void	ft_dblylst_addback(t_doublylist **lst, t_doublylist *new)
 {
-	t_doublylist	*new_node;
-
-	new_node = (t_list *) malloc(sizeof(t_doublylist));
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->prev = NULL;
-	new_node->next = NULL;
-	return (new_node);
+	
 }
