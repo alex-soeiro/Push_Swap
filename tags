@@ -84,6 +84,7 @@ ft_tolower	include/libft/srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_writeline	include/libft/srcs/get_next_line.c	/^char	*ft_writeline(char *line, char *buf)$/;"	f
 get_next_line	include/libft/srcs/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+is_int	push_swap.c	/^int	is_int(char **nums)$/;"	f
 is_only_numbers	push_swap.c	/^int	is_only_numbers(char **nums)$/;"	f
 is_repeated_number	push_swap.c	/^int	is_repeated_number(char **nums)$/;"	f
 length	include/libft/include/libft.h	/^	int				length;$/;"	m	struct:s_array

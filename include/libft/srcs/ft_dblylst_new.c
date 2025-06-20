@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 14:36:36 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/20 16:40:31 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/20 21:44:29 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_doublylist	*ft_dblylst_new(void *content)
 	new_node = (t_doublylist *) malloc(sizeof(t_doublylist));
 	if (!new_node)
 		return (NULL);
-	new_node->content = content;
+	new_node->content = *content;
 	new_node->prev = NULL;
 	new_node->next = NULL;
 	return (new_node);

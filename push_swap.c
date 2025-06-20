@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/20 18:58:51 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/20 20:53:16 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	**split_args(char **argv, int argc)
 		i++;
 	}
 	split = ft_split(args, ' ');
-	return(free(args), split);
+	return (free(args), split);
 }
 
 int	is_only_numbers(char **nums)
@@ -90,8 +90,18 @@ int	is_repeated_number(char **nums)
 		j = 0;
 		while (j < i)
 			if (!ft_strcmp(nums[i], nums[j++]))
-					return (0);
+				return (0);
 		i++;
+	}
+	return (1);
+}
+
+int	is_int(char **nums)
+{
+	while (*nums)
+	{
+		if (ft_atol(*nums) > INT_MAX || ft_atol(*(nums++)) < INT_MIN)
+			return (0);
 	}
 	return (1);
 }
@@ -119,6 +129,10 @@ int	main(int argc, char **argv)
 	if (!is_repeated_number(nums))
 		return (ft_free_matrix(nums), error_message(3));
 
+	// Check if every number is within int range
+	if (!is_int(nums))
+		return (error_message(4));
+
 	// DEBUG: print split nums
 	while (nums[i])
 		ft_printf("%s\n", nums[i++]);
@@ -126,14 +140,14 @@ int	main(int argc, char **argv)
 	// Create stack a
 	stack_a = createstack_a(nums);
 	stack_a_iter = stack_a;
-	
+
 	// DEBUG: Print stack a
 	while (stack_a_iter->next != stack_a)
 	{
-		ft_printf("%s, ", stack_a_iter->content);
+		ft_printf("%i, ", *(int *) stack_a_iter->content);
 		stack_a_iter = stack_a_iter->next;
 	}
-	ft_printf("%s, ", stack_a_iter->content);
+	ft_printf("%i\n", *(int *) stack_a_iter->content);
 
 	// Free the allocated memory for nums
 	ft_free_matrix(nums);

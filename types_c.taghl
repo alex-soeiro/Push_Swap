@@ -1,7 +1,7 @@
-syn keyword CTagsStructure s_list s_doublylist s_array
-syn keyword CTagsMember prev array content length next
-syn keyword CTagsFunction ft_isdigit ft_strlcpy ft_strdup ft_putchar_fd ft_printf ft_substr ft_isalpha ft_lstadd_back error_message ft_lstdelone ft_calloc ft_strrchr ft_strmapi split_args ft_lstiter merge_sort ft_memchr ft_memset ft_strcpy ft_isprint calculate_length ft_found_newline ft_tolower ft_lstsize ft_readline ft_printstr ft_lstmap ft_isalnum ft_printnbr ft_writeline ft_strlcat ft_dblylst_new ft_countwords ft_itoa ft_bzero ft_toupper ft_encrypt ft_printunsign_nbr ft_lstlast is_repeated_number
-syn keyword CTagsFunction ft_issign ft_printadd ft_lstadd_front ft_clear ft_strncmp ft_memcpy ft_strcmp ft_populate is_only_numbers ft_strjoin ft_isspace ft_memmove ft_strchr main ft_lstclear ft_strtrim ft_free_matrix ft_printchar ft_isascii ft_lstnew merge get_next_line createstack_a ft_memcmp ft_strnstr ft_removeline ft_putstr_fd ft_putnbr_fd ft_split ft_printhex ft_printarg ft_nlen ft_strlen ft_putendl_fd populate_array ft_dblylst_last ft_dblylst_addback ft_striteri ft_atoi
-syn keyword CTagsType t_array t_doublylist t_list
-syn keyword CTagsDefinedName LIBFT_H BUFFER_SIZE PUSH_SWAP_H
+syn keyword CTagsStructure s_array s_doublylist s_list
+syn keyword CTagsMember array length content prev next
+syn keyword CTagsFunction ft_bzero ft_populate ft_isascii ft_putnbr_fd ft_strcpy ft_toupper main ft_isspace ft_countwords ft_lstmap createstack_a ft_split ft_strmapi ft_lstadd_back ft_printunsign_nbr ft_strlcat calculate_length ft_lstsize error_message ft_dblylst_last ft_strcmp ft_strtrim ft_printadd ft_dblylst_new ft_atoi ft_lstclear ft_nlen ft_strdup ft_strlcpy ft_issign ft_printhex ft_printf ft_calloc ft_strrchr ft_lstadd_front ft_strjoin ft_isdigit ft_lstiter ft_lstdelone ft_striteri ft_putendl_fd
+syn keyword CTagsFunction ft_isalpha is_int ft_tolower ft_memcpy ft_putstr_fd ft_itoa ft_putchar_fd ft_readline ft_strlen ft_printchar ft_free_matrix split_args ft_lstlast ft_strncmp ft_memchr ft_isalnum ft_found_newline ft_clear ft_memcmp get_next_line ft_isprint ft_removeline ft_printstr ft_strchr ft_substr ft_printarg ft_dblylst_addback populate_array ft_lstnew ft_writeline is_only_numbers ft_strnstr merge_sort merge is_repeated_number ft_encrypt ft_printnbr ft_memset ft_memmove
+syn keyword CTagsType t_array t_list t_doublylist
+syn keyword CTagsDefinedName LIBFT_H PUSH_SWAP_H BUFFER_SIZE
 

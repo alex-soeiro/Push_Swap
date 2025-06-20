@@ -19,5 +19,9 @@ int	error_message(int error_code)
 		ft_printf("error_code 3");
 		return (3);
 	}
+	if (error_code ==4)
+	{
+		ft_printf("error_code 4");
+	}
 	return (0);
 }
