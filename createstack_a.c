@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 14:56:20 by a-soeiro          #+#    #+#             */
-/*   Updated: 2025/06/20 21:15:26 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/20 22:22:31 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,16 @@ t_doublylist	*createstack_a(char **nums)
 {
 	t_doublylist	*dblylst;
 	t_doublylist	*new_node;
-	int				content;
+	long			*content;
 
 	dblylst = NULL;
 	while (*nums)
 	{
-		content = ft_atol(*(nums++));
-		new_node = ft_dblylst_new(&content);
+		content = malloc(sizeof(long));
+		if (!content)
+		   return (NULL);	
+		*content = ft_atol(*(nums++));
+		new_node = ft_dblylst_new(content);
 		if (dblylst == NULL)
 		{
 			new_node->next = new_node;
