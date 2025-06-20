@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dblylst_new.c                                   :+:      :+:    :+:   */
+/*   createstack_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 14:36:36 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/20 16:40:31 by avieira-         ###   ########.fr       */
+/*   Created: 2025/06/20 14:56:20 by a-soeiro          #+#    #+#             */
+/*   Updated: 2025/06/20 16:58:50 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "include/libft/include/libft.h"
+#include "include/push_swap.h"
 
-t_doublylist	*ft_dblylst_new(void *content)
+t_doublylist	*createstack_a(char **nums)
 {
+	t_doublylist	*dblylst;
 	t_doublylist	*new_node;
 
-	new_node = (t_doublylist *) malloc(sizeof(t_doublylist));
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->prev = NULL;
-	new_node->next = NULL;
-	return (new_node);
+	dblylst = NULL;
+	while (*nums)
+	{
+		new_node = ft_dblylst_new(*(nums++));
+		if (dblylst == NULL)
+		{
+			dblylst = new_node;
+			dblylst->next = new_node;
+			dblylst->prev = new_node;
+		}
+		else
+			ft_dblylst_addback(dblylst, new_node);
+	}
+	return (dblylst);
 }

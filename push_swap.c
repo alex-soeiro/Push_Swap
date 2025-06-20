@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/18 15:04:37 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:58:51 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,13 +98,15 @@ int	is_repeated_number(char **nums)
 
 int	main(int argc, char **argv)
 {
-	int		i;
-	char	**nums;
+	int				i;
+	char			**nums;
+	t_doublylist	*stack_a;
+	t_doublylist	*stack_a_iter;
 
 	i = 0;
 	// if no arguments given
 	if (argc == 1)
-		return (ft_free_matrix(nums), error_message(1));
+		return (error_message(1));
 
 	// if arguments given
 	nums = split_args(argv, argc);
@@ -117,31 +119,41 @@ int	main(int argc, char **argv)
 	if (!is_repeated_number(nums))
 		return (ft_free_matrix(nums), error_message(3));
 
+	// DEBUG: print split nums
+	while (nums[i])
+		ft_printf("%s\n", nums[i++]);
+
 	// Create stack a
+	stack_a = createstack_a(nums);
+	stack_a_iter = stack_a;
 	
+	// DEBUG: Print stack a
+	while (stack_a_iter->next != stack_a)
+	{
+		ft_printf("%s, ", stack_a_iter->content);
+		stack_a_iter = stack_a_iter->next;
+	}
+	ft_printf("%s, ", stack_a_iter->content);
 
 	// Free the allocated memory for nums
-	while (nums[i])
-		ft_printf("%s, ", nums[i++]);
 	ft_free_matrix(nums);
-	i = 0;
 }
 /*
-int	main(int argc, char **argv)
-{
-	int		i;
-	int		j;
-	t_array	middle;
+   int	main(int argc, char **argv)
+   {
+   int		i;
+   int		j;
+   t_array	middle;
 
-	i = 1;
-	j = 0;
-	middle.length = argc - 1;
-	middle.array = malloc((argc - 1) * sizeof(int));
-	while (i < argc)
-		middle.array[j++] = ft_atoi(argv[i++]);
-	i = 0;
-	merge_sort(middle);
-	while (i < argc - 1)
-		printf("%i, ", middle.array[i++]);
-	free(middle.array);
-}*/
+   i = 1;
+   j = 0;
+   middle.length = argc - 1;
+   middle.array = malloc((argc - 1) * sizeof(int));
+   while (i < argc)
+   middle.array[j++] = ft_atoi(argv[i++]);
+   i = 0;
+   merge_sort(middle);
+   while (i < argc - 1)
+   printf("%i, ", middle.array[i++]);
+   free(middle.array);
+   }*/

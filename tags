@@ -11,6 +11,7 @@ array	include/libft/include/libft.h	/^	int				*array;$/;"	m	struct:s_array
 calculate_length	include/libft/srcs/ft_itoa.c	/^static int	calculate_length(int n)$/;"	f	file:
 content	include/libft/include/libft.h	/^	void				*content;$/;"	m	struct:s_doublylist
 content	include/libft/include/libft.h	/^	void			*content;$/;"	m	struct:s_list
+createstack_a	createstack_a.c	/^t_doublylist	*createstack_a(char **nums)$/;"	f
 error_message	error_message.c	/^int	error_message(int error_code)$/;"	f
 ft_atoi	include/libft/srcs/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
 ft_bzero	include/libft/srcs/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
@@ -19,8 +20,9 @@ ft_calloc	include/libft/srcs/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t 
 ft_calloc	include/libft/srcs/get_next_line_utils.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f
 ft_clear	include/libft/srcs/ft_split.c	/^static char	**ft_clear(char **split, int i)$/;"	f	file:
 ft_countwords	include/libft/srcs/ft_split.c	/^static int	ft_countwords(char const *s, char c)$/;"	f	file:
-ft_dblylst_addback	include/libft/srcs/ft_dblylst_addback.c	/^void	ft_dblylst_addback(t_doublylist **lst, t_doublylist *new)$/;"	f
-ft_dblylst_new	include/libft/srcs/ft_dblylst_new.c	/^t_doublylist	ft_dblylst_new(void *content)$/;"	f
+ft_dblylst_addback	include/libft/srcs/ft_dblylst_addback.c	/^void	ft_dblylst_addback(t_doublylist *dblylst, t_doublylist *new)$/;"	f
+ft_dblylst_last	include/libft/srcs/ft_dblylst_last.c	/^t_doublylist    *ft_dblylst_last(t_doublylist *dblylst)$/;"	f
+ft_dblylst_new	include/libft/srcs/ft_dblylst_new.c	/^t_doublylist	*ft_dblylst_new(void *content)$/;"	f
 ft_encrypt	include/libft/srcs/ft_strmapi.c	/^char	ft_encrypt(unsigned int i, char c)$/;"	f
 ft_found_newline	include/libft/srcs/get_next_line_utils.c	/^int	ft_found_newline(char *line)$/;"	f
 ft_free_matrix	include/libft/srcs/ft_free_matrix.c	/^void	ft_free_matrix(char **matrix)$/;"	f
