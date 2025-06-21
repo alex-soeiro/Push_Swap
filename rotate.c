@@ -6,31 +6,27 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:40:13 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 19:29:33 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 17:51:39 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ROTATE
+#include "include/libft/include/libft.h"
+#include "include/push_swap.h"
 
-Description: Rotate the first element of a stack to be the last element of a stack;
+// Rotate the first element of a stack to be the last element of a stack
 
-Operations:
-	1. Create a temporary pointer that's a copy of head;
-	2. Create a temporary pointer that's a copy of first_node->next;
-	3. Make first_node->next be same as NULL;
-	4. Make last_node->next be same as first_node addres;
-	5. Make head be same as second_node address; */
+void	rotate(t_doublylist **stack)
+{
+	*stack = (*stack)->next;
+}
 
-/* REVERSE_ROTATE
 
-Description: Rotate the last element of a stack to be the frst element of a stack;
+// Rotate the last element of a stack to be the frst element of a stack
 
-Operations:
-	1. Create a temporary pointer that's a copy of head;
-	2. Create a temporary pointer that's a copy of penultimate node->next;
-	3. Make head be same as penultimate node->next;
-	4. Make penultimate node->next be same as NULL;
-	5. Make first_node->next be same as head; */
+void	reverse_rotate(t_doublylist **stack)
+{
+	*stack = (*stack)->prev;
+}
 
 /* ROTATE_A
 
@@ -59,3 +55,5 @@ Description: Use reverse_rotate function to place first element of stack 'b' to 
 
 Operations:
 	1. Call reverse_rotate function on stack 'b'; */
+
+

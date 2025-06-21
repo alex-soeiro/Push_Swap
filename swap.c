@@ -6,21 +6,34 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:57:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/09 18:37:25 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:32:49 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* SWAP
+#include "include/libft/include/libft.h"
+#include "include/push_swap.h"
 
-Description: Swap the first two elements of a stack.
+// Description: Swap the first two elements of a stack.
+void	swap(t_doublylist **stack)
+{
+	t_doublylist	*tmp1;
+	t_doublylist	*tmp2;
+	t_doublylist	*tmp3;
+	t_doublylist	*tmp4;
 
-Operations:
-	1. Create a temporary pointer that's a copy of second_node->next
-	2. Create a temporary pointer that's a copy of first_node->next
-	3. Create a temporary ponter that's a copy of head
-	4. Make second_node->next be same as head
-	5. Make first_node->next be same as second_node->next
-	6. Make head be same as first_node->next */
+	tmp1 = (*stack)->prev;
+	tmp2 = (*stack);
+	tmp3 = (*stack)->next;
+	tmp4 = (*stack)->next->next;
+	(*stack)->next->prev = tmp1;
+	(*stack)->next->next = tmp2;
+	(*stack)->prev->next = tmp3;
+	(*stack)->next = tmp4;
+	(*stack)->prev = tmp3;
+	(*stack) = tmp3;
+}
+
+
 
 /* SWAP_A
 

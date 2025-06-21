@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/20 16:49:12 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:34:41 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,11 @@
 
 int				error_message(int error_code);
 t_doublylist	*createstack_a(char **nums);
+
+// MOVEMENTS //
+
+void	rotate(t_doublylist **stack);
+void	reverse_rotate(t_doublylist **stack);
+void	swap(t_doublylist **stack);
 
 #endif

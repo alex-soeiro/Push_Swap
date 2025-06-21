@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/21 16:30:27 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:35:47 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,14 +106,28 @@ int	is_int(char **nums)
 	return (1);
 }
 
+void	print_stack(t_doublylist *stack)
+{
+	t_doublylist	*stack_iter;
+
+	stack_iter = stack;
+	while (stack_iter->next != stack)
+	{
+		ft_printf("%i, ", *(int *) stack_iter->content);
+		stack_iter = stack_iter->next;
+	}
+	ft_printf("%i\n", *(int *) stack_iter->content);
+}
+
 int	main(int argc, char **argv)
 {
 	int				i;
 	char			**nums;
 	t_doublylist	*stack_a;
-	t_doublylist	*stack_a_iter;
+	t_doublylist	*stack_b;
 
 	i = 0;
+	stack_b = NULL;
 	// if no arguments given
 	if (argc == 1)
 		return (error_message(1));
@@ -139,15 +153,24 @@ int	main(int argc, char **argv)
 
 	// Create stack a
 	stack_a = createstack_a(nums);
-	stack_a_iter = stack_a;
 
 	// DEBUG: Print stack a
-	while (stack_a_iter->next != stack_a)
-	{
-		ft_printf("%i, ", *(int *) stack_a_iter->content);
-		stack_a_iter = stack_a_iter->next;
-	}
-	ft_printf("%i\n", *(int *) stack_a_iter->content);
+	print_stack(stack_a);
+
+	// DEBUG MOVEMENTS
+
+	/* Rotate
+	rotate(&stack_a);
+	print_stack(stack_a);
+	reverse_rotate(&stack_a);
+	print_stack(stack_a);*/
+
+	// Swap
+	swap(&stack_a);
+	print_stack(stack_a);
+	swap(&stack_a);
+	print_stack(stack_a);
+
 
 	// Free stack a;
 	ft_dblylst_clear(stack_a);

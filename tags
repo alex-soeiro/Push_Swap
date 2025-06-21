@@ -95,6 +95,9 @@ next	include/libft/include/libft.h	/^	struct s_doublylist	*next;$/;"	m	struct:s_
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 populate_array	include/libft/srcs/ft_itoa.c	/^static char	*populate_array(char *array, int i, int n)$/;"	f	file:
 prev	include/libft/include/libft.h	/^	struct s_doublylist	*prev;$/;"	m	struct:s_doublylist	typeref:struct:s_doublylist::s_doublylist
+print_stack	push_swap.c	/^void	print_stack(t_doublylist *stack)$/;"	f
+reverse_rotate	rotate.c	/^void	reverse_rotate(t_doublylist **stack)$/;"	f
+rotate	rotate.c	/^void	rotate(t_doublylist **stack)$/;"	f
 s_array	include/libft/include/libft.h	/^typedef struct s_array$/;"	s
 s_doublylist	include/libft/include/libft.h	/^typedef struct s_doublylist$/;"	s
 s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
