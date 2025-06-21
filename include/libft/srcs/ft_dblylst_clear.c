@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dblylst_last.c                                  :+:      :+:    :+:   */
+/*   ft_dblylst_clear.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/20 13:46:59 by a-soeiro          #+#    #+#             */
-/*   Updated: 2025/06/21 15:39:08 by avieira-         ###   ########.fr       */
+/*   Created: 2025/06/21 15:18:37 by avieira-          #+#    #+#             */
+/*   Updated: 2025/06/21 16:34:17 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-t_doublylist	*ft_dblylst_last(t_doublylist *dblylst)
+void	ft_dblylst_clear(t_doublylist *dblylst)
 {
-	t_doublylist	*dblylst_iter;
+	t_doublylist	*tmp;
+	t_doublylist	*dblylst_ptr;
 
-	dblylst_iter = dblylst;
-	while (dblylst_iter->next != dblylst)
-		dblylst_iter = dblylst_iter->next;
-	return (dblylst_iter);
+	dblylst_ptr = dblylst;
+	while (dblylst_ptr->next != dblylst)
+	{
+		tmp = dblylst_ptr->next;
+		free(dblylst_ptr->content);
+		free(dblylst_ptr);
+		dblylst_ptr = tmp;
+	}
+		tmp = dblylst_ptr->next;
+		free(dblylst_ptr->content);
+		free(dblylst_ptr);
+		dblylst_ptr = tmp;
 }

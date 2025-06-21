@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/20 22:22:03 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 16:30:27 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,8 +149,8 @@ int	main(int argc, char **argv)
 	}
 	ft_printf("%i\n", *(int *) stack_a_iter->content);
 
-	// Free the allocated memory for nums
-	ft_free_matrix(nums);
+	// Free stack a;
+	ft_dblylst_clear(stack_a);
 }
 /*
    int	main(int argc, char **argv)

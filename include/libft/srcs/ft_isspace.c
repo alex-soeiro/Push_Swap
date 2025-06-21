@@ -6,13 +6,13 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:03:19 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/12 17:10:09 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 15:39:36 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isspace(char c)
 {
 	if (c == ' ' || c == '\t' || (c >= '\v' && c <= 'r'))
-			return (1);
+		return (1);
 	return (0);
 }

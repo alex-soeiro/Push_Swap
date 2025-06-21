@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:40:52 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/20 21:00:28 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 15:43:00 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /* DOUBLY LIST */
 
 void			ft_dblylst_addback(t_doublylist *dblylst, t_doublylist *new);
-void			ft_dblylst_clear(t_doublylist **dblylst);
+void			ft_dblylst_clear(t_doublylist *dblylst);
 t_doublylist	*ft_dblylst_new(void *content);
 t_doublylist	*ft_dblylst_last(t_doublylist *dblylst);
 

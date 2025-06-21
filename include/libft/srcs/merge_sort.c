@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 20:35:26 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/18 14:51:30 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/21 15:41:08 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	merge_sort(t_array middle)
 		left.array = malloc(left.length * sizeof(int));
 		right.array = malloc(right.length * sizeof(int));
 		if (!left.array || !right.array)
-			return (free(left.array), free(right.array)) ;
+			return (free(left.array), free(right.array));
 		while (i < left.length)
 			left.array[j++] = middle.array[i++];
 		j = 0;
@@ -51,9 +51,11 @@ void	merge(t_array left, t_array middle, t_array right)
 	r = 0;
 	while (m < middle.length)
 	{
-		if (l < left.length && r < right.length && left.array[l] <= right.array[r])
+		if (l < left.length && r < right.length
+			&& left.array[l] <= right.array[r])
 			middle.array[m++] = left.array[l++];
-		else if (r < right.length && l < left.length && right.array[r] <= left.array[l])
+		else if (r < right.length && l < left.length
+			&& right.array[r] <= left.array[l])
 			middle.array[m++] = right.array[r++];
 		else if (l < left.length && r >= right.length)
 			middle.array[m++] = left.array[l++];
