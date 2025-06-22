@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/21 18:35:47 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/22 04:10:21 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,6 @@ int	main(int argc, char **argv)
 	t_doublylist	*stack_b;
 
 	i = 0;
-	stack_b = NULL;
 	// if no arguments given
 	if (argc == 1)
 		return (error_message(1));
@@ -153,9 +152,11 @@ int	main(int argc, char **argv)
 
 	// Create stack a
 	stack_a = createstack_a(nums);
+	stack_b = createstack_a(nums);
 
 	// DEBUG: Print stack a
 	print_stack(stack_a);
+	print_stack(stack_b);
 
 	// DEBUG MOVEMENTS
 
@@ -165,12 +166,28 @@ int	main(int argc, char **argv)
 	reverse_rotate(&stack_a);
 	print_stack(stack_a);*/
 
-	// Swap
+	/* Swap
 	swap(&stack_a);
 	print_stack(stack_a);
 	swap(&stack_a);
-	print_stack(stack_a);
+	print_stack(stack_a);*/
 
+	/* Push */
+	push(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	push(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	push(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	push(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	push(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
 
 	// Free stack a;
 	ft_dblylst_clear(stack_a);

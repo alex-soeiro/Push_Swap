@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 14:56:20 by a-soeiro          #+#    #+#             */
-/*   Updated: 2025/06/21 15:15:00 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/22 04:04:07 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ t_doublylist	*createstack_a(char **nums)
 		else
 			ft_dblylst_addback(dblylst, new_node);
 	}
-	return (ft_free_matrix(nums_ptr), dblylst);
+	return (dblylst);
+	//return (ft_free_matrix(nums_ptr), dblylst);
 }
