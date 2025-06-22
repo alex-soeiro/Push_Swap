@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:15:37 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/22 04:08:12 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/22 20:41:23 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,27 @@
 // Description: Push the top element of stack 'x' to stack 'y'.
 void	push(t_doublylist **stack_x, t_doublylist **stack_y)
 {
-	t_doublylist	*tmp1;
-	t_doublylist	*tmp2;
-	t_doublylist	*tmp3;
-	t_doublylist	*tmp4;
-	t_doublylist	*tmp5;
+	int		size;
+	t_tmp	tmp;
 
-	tmp1 = (*stack_x)->next;
-	tmp2 = (*stack_x)->prev;
-	tmp3 = (*stack_y)->prev;
-	tmp4 = (*stack_x);
-	tmp5 = (*stack_y);
-	(*stack_x)->prev->next = tmp1;
-	(*stack_x)->next->prev = tmp2;
-	(*stack_x)->prev = tmp3;
-	(*stack_x)->next = tmp5;
-	(*stack_x) = tmp1;
-	(*stack_y)->prev->next = tmp4;
-	(*stack_y)->prev = tmp4;
-	(*stack_y) = tmp4;
+	size = ft_dblylst_size((*stack_x));
+	if (size == 0)
+		return ;
+	tmp.n_1 = (*stack_x)->next;
+	tmp.n_2 = (*stack_x)->prev;
+	tmp.n_3 = (*stack_y)->prev;
+	tmp.n_4 = (*stack_x);
+	tmp.n_5 = (*stack_y);
+	(*stack_x)->prev->next = tmp.n_1;
+	(*stack_x)->next->prev = tmp.n_2;
+	(*stack_x)->prev = tmp.n_3;
+	(*stack_x)->next = tmp.n_5;
+	(*stack_y)->prev->next = tmp.n_4;
+	(*stack_y)->prev = tmp.n_4;
+	(*stack_x) = tmp.n_1;
+	(*stack_y) = tmp.n_4;
+	if (size == 1)
+		(*stack_x) = NULL;
 }
 
 
@@ -44,11 +46,11 @@ void	push(t_doublylist **stack_x, t_doublylist **stack_y)
 Description: Use push function to stack 'a';
 
 Operations:
-	1. Call push function to stack 'a'; */
+1. Call push function to stack 'a'; */
 
 /* PUSH_B
 
 Decription: Use push function to stack 'b';
 
 Operations:
-	1. Call push function to stack 'b'; */
+1. Call push function to stack 'b'; */

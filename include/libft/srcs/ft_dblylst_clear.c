@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 15:18:37 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/21 16:34:17 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/22 20:47:24 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_dblylst_clear(t_doublylist *dblylst)
 	t_doublylist	*dblylst_ptr;
 
 	dblylst_ptr = dblylst;
-	while (dblylst_ptr->next != dblylst)
+	while (dblylst && dblylst_ptr->next != dblylst)
 	{
 		tmp = dblylst_ptr->next;
 		free(dblylst_ptr->content);

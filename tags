@@ -23,6 +23,7 @@ ft_dblylst_addback	include/libft/srcs/ft_dblylst_addback.c	/^void	ft_dblylst_add
 ft_dblylst_clear	include/libft/srcs/ft_dblylst_clear.c	/^void	ft_dblylst_clear(t_doublylist *dblylst)$/;"	f
 ft_dblylst_last	include/libft/srcs/ft_dblylst_last.c	/^t_doublylist	*ft_dblylst_last(t_doublylist *dblylst)$/;"	f
 ft_dblylst_new	include/libft/srcs/ft_dblylst_new.c	/^t_doublylist	*ft_dblylst_new(void *content)$/;"	f
+ft_dblylst_size	include/libft/srcs/ft_dblylst_size.c	/^int	ft_dblylst_size(t_doublylist *dblylst)$/;"	f
 ft_encrypt	include/libft/srcs/ft_strmapi.c	/^char	ft_encrypt(unsigned int i, char c)$/;"	f
 ft_found_newline	include/libft/srcs/get_next_line_utils.c	/^int	ft_found_newline(char *line)$/;"	f
 ft_free_matrix	include/libft/srcs/ft_free_matrix.c	/^void	ft_free_matrix(char **matrix)$/;"	f
@@ -91,6 +92,14 @@ length	include/libft/include/libft.h	/^	int				length;$/;"	m	struct:s_array
 main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f
 merge_sort	include/libft/srcs/merge_sort.c	/^void	merge_sort(t_array middle)$/;"	f
 merge	include/libft/srcs/merge_sort.c	/^void	merge(t_array left, t_array middle, t_array right)$/;"	f
+n_1	include/push_swap.h	/^	t_doublylist	*n_1;$/;"	m	struct:s_tmp
+n_2	include/push_swap.h	/^	t_doublylist	*n_2;$/;"	m	struct:s_tmp
+n_3	include/push_swap.h	/^	t_doublylist	*n_3;$/;"	m	struct:s_tmp
+n_4	include/push_swap.h	/^	t_doublylist	*n_4;$/;"	m	struct:s_tmp
+n_5	include/push_swap.h	/^	t_doublylist	*n_5;$/;"	m	struct:s_tmp
+n_6	include/push_swap.h	/^	t_doublylist	*n_6;$/;"	m	struct:s_tmp
+n_7	include/push_swap.h	/^	t_doublylist	*n_7;$/;"	m	struct:s_tmp
+n_8	include/push_swap.h	/^	t_doublylist	*n_8;$/;"	m	struct:s_tmp
 next	include/libft/include/libft.h	/^	struct s_doublylist	*next;$/;"	m	struct:s_doublylist	typeref:struct:s_doublylist::s_doublylist
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 populate_array	include/libft/srcs/ft_itoa.c	/^static char	*populate_array(char *array, int i, int n)$/;"	f	file:
@@ -102,8 +111,10 @@ rotate	rotate.c	/^void	rotate(t_doublylist **stack)$/;"	f
 s_array	include/libft/include/libft.h	/^typedef struct s_array$/;"	s
 s_doublylist	include/libft/include/libft.h	/^typedef struct s_doublylist$/;"	s
 s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
+s_tmp	include/push_swap.h	/^typedef struct s_tmp$/;"	s
 split_args	push_swap.c	/^char	**split_args(char **argv, int argc)$/;"	f
 swap	swap.c	/^void	swap(t_doublylist **stack)$/;"	f
 t_array	include/libft/include/libft.h	/^}	t_array;$/;"	t	typeref:struct:s_array
 t_doublylist	include/libft/include/libft.h	/^}	t_doublylist;$/;"	t	typeref:struct:s_doublylist
 t_list	include/libft/include/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
+t_tmp	include/push_swap.h	/^}	t_tmp;$/;"	t	typeref:struct:s_tmp
