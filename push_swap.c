@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/22 20:52:59 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/23 15:56:43 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,7 @@ int	main(int argc, char **argv)
 	t_doublylist	*stack_b;
 
 	i = 0;
+	stack_b = NULL;
 	// if no arguments given
 	if (argc == 1)
 		return (error_message(1));
@@ -154,7 +155,6 @@ int	main(int argc, char **argv)
 
 	// Create stack a
 	stack_a = createstack_a(nums);
-	stack_b = createstack_a(nums);
 
 	// DEBUG: Print stack a
 	ft_printf("stack_a: ");
@@ -178,6 +178,11 @@ int	main(int argc, char **argv)
 
 	/* Push */
 	push(&stack_a, &stack_b);
+	ft_printf("stack_a: ");
+	print_stack(stack_a);
+	ft_printf("stack_b: ");
+	print_stack(stack_b);
+	push(&stack_b, &stack_a);
 	ft_printf("stack_a: ");
 	print_stack(stack_a);
 	ft_printf("stack_b: ");
