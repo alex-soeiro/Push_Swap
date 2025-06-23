@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/23 15:56:43 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/23 18:24:08 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,19 +164,42 @@ int	main(int argc, char **argv)
 
 	// DEBUG MOVEMENTS
 
-	/* Rotate
+	/* Rotate */
+	ft_printf("\nROTATE\n");
 	rotate(&stack_a);
+	ft_printf("stack_a: ");
 	print_stack(stack_a);
+	ft_printf("stack_a: ");
 	reverse_rotate(&stack_a);
-	print_stack(stack_a);*/
+	print_stack(stack_a);
 
-	/* Swap
+	/* Rotate_Rotate */
+	ft_printf("\nROTATE_ROTATE\n");
+	rotate_rotate(&stack_a, &stack_b);
+	ft_printf("stack_a: ");
+	print_stack(stack_a);
+	ft_printf("stack_b: ");
+	print_stack(stack_b);
+
+	/* Swap */
+	ft_printf("\nSWAP\n");
+	swap(&stack_a);
+	printf("stack_a");
+	print_stack(stack_a);
+	printf("stack_a");
 	swap(&stack_a);
 	print_stack(stack_a);
-	swap(&stack_a);
-	print_stack(stack_a);*/
+
+	/* Swap_Swap */
+	ft_printf("\nSWAP_SWAP\n");
+	swap_swap(&stack_a, &stack_b);
+	ft_printf("stack_a: ");
+	print_stack(stack_a);
+	ft_printf("stack_b: ");
+	print_stack(stack_b);
 
 	/* Push */
+	ft_printf("\nPUSH\n");
 	push(&stack_a, &stack_b);
 	ft_printf("stack_a: ");
 	print_stack(stack_a);

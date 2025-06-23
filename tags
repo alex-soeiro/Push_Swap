@@ -113,13 +113,16 @@ print_stack	push_swap.c	/^void	print_stack(t_doublylist *stack)$/;"	f	typeref:ty
 push_to_empty	push.c	/^void	push_to_empty(t_doublylist **stack_x, t_doublylist **stack_y)$/;"	f	typeref:typename:void
 push_to_loaded	push.c	/^void	push_to_loaded(t_doublylist **stack_x, t_doublylist **stack_y)$/;"	f	typeref:typename:void
 push	push.c	/^void	push(t_doublylist **stack_x, t_doublylist **stack_y)$/;"	f	typeref:typename:void
+reverse_rotate_rotate	rotate.c	/^void	reverse_rotate_rotate(t_doublylist **stack_a, t_doublylist **stack_b)$/;"	f	typeref:typename:void
 reverse_rotate	rotate.c	/^void	reverse_rotate(t_doublylist **stack)$/;"	f	typeref:typename:void
+rotate_rotate	rotate.c	/^void	rotate_rotate(t_doublylist **stack_a, t_doublylist **stack_b)$/;"	f	typeref:typename:void
 rotate	rotate.c	/^void	rotate(t_doublylist **stack)$/;"	f	typeref:typename:void
 s_array	include/libft/include/libft.h	/^typedef struct s_array$/;"	s
 s_doublylist	include/libft/include/libft.h	/^typedef struct s_doublylist$/;"	s
 s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
 s_tmp	include/push_swap.h	/^typedef struct s_tmp$/;"	s
 split_args	push_swap.c	/^char	**split_args(char **argv, int argc)$/;"	f	typeref:typename:char **
+swap_swap	swap.c	/^void	swap_swap(t_doublylist **stack_a, t_doublylist **stack_b)$/;"	f	typeref:typename:void
 swap	swap.c	/^void	swap(t_doublylist **stack)$/;"	f	typeref:typename:void
 t_array	include/libft/include/libft.h	/^}	t_array;$/;"	t	typeref:struct:s_array
 t_doublylist	include/libft/include/libft.h	/^}	t_doublylist;$/;"	t	typeref:struct:s_doublylist
