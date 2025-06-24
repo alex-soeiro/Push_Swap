@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:57:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/23 17:53:07 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/24 13:41:01 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ void	swap(t_doublylist **stack)
 	size = ft_dblylst_size(*stack);
 	if (size == 0 || size == 1)
 		return ;
+	if (size == 2)
+	{
+		*stack = (*stack)->next;
+		return ;
+	}
+
 	t_doublylist	*tmp1;
 	t_doublylist	*tmp2;
 	t_doublylist	*tmp3;
