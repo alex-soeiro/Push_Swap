@@ -90,14 +90,14 @@ ft_tolower	include/libft/srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref
 ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
 ft_writeline	include/libft/srcs/get_next_line.c	/^char	*ft_writeline(char *line, char *buf)$/;"	f	typeref:typename:char *
 get_next_line	include/libft/srcs/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+is_int	parse.c	/^int is_int(char **nums)$/;"	f	typeref:typename:int
 is_int	parsing.c	/^int is_int(char **nums)$/;"	f	typeref:typename:int
-is_int	push_swap.c	/^int	is_int(char **nums)$/;"	f	typeref:typename:int
+is_only_numbers	parse.c	/^int is_only_numbers(char **nums)$/;"	f	typeref:typename:int
 is_only_numbers	parsing.c	/^int is_only_numbers(char **nums)$/;"	f	typeref:typename:int
-is_only_numbers	push_swap.c	/^int	is_only_numbers(char **nums)$/;"	f	typeref:typename:int
-is_only_spaces	parsing.c	/^int is_only_spaces(char *argv)$/;"	f	typeref:typename:int
-is_only_spaces	push_swap.c	/^int	is_only_spaces(char *argv)$/;"	f	typeref:typename:int
+is_only_spaces	parse.c	/^int is_only_spaces(char *argv)$/;"	f	typeref:typename:int
+is_only_spaces	parsing.c	/^int is_only_spaces(char *argv, char ***nums)$/;"	f	typeref:typename:int
+is_repeated_number	parse.c	/^int is_repeated_number(char **nums)$/;"	f	typeref:typename:int
 is_repeated_number	parsing.c	/^int is_repeated_number(char **nums)$/;"	f	typeref:typename:int
-is_repeated_number	push_swap.c	/^int	is_repeated_number(t_dblylst *stack_a)$/;"	f	typeref:typename:int
 length	include/libft/include/libft.h	/^	int				length;$/;"	m	struct:s_array	typeref:typename:int
 main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
 merge_sort	include/libft/srcs/merge_sort.c	/^void	merge_sort(t_array middle)$/;"	f	typeref:typename:void
@@ -112,6 +112,8 @@ n_7	include/push_swap.h	/^	t_dblylst	*n_7;$/;"	m	struct:s_tmp	typeref:typename:t
 n_8	include/push_swap.h	/^	t_dblylst	*n_8;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
 next	include/libft/include/libft.h	/^	struct s_dblylst	*next;$/;"	m	struct:s_dblylst	typeref:struct:s_dblylst *
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+parse	parse.c	/^int parse(int argc, char **argv, char ***nums)$/;"	f	typeref:typename:int
+parse	parsing.c	/^int parse(int argc, char **argv, char ***nums)$/;"	f	typeref:typename:int
 populate_array	include/libft/srcs/ft_itoa.c	/^static char	*populate_array(char *array, int i, int n)$/;"	f	typeref:typename:char *	file:
 prev	include/libft/include/libft.h	/^	struct s_dblylst	*prev;$/;"	m	struct:s_dblylst	typeref:struct:s_dblylst *
 print_stack	push_swap.c	/^void	print_stack(t_dblylst *stack)$/;"	f	typeref:typename:void
@@ -126,7 +128,7 @@ s_array	include/libft/include/libft.h	/^typedef struct s_array$/;"	s
 s_dblylst	include/libft/include/libft.h	/^typedef struct s_dblylst$/;"	s
 s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
 s_tmp	include/push_swap.h	/^typedef struct s_tmp$/;"	s
-split_args	push_swap.c	/^char	**split_args(char **argv, int argc)$/;"	f	typeref:typename:char **
+split_args	parse.c	/^char    **split_args(char **argv, int argc)$/;"	f	typeref:typename:char **
 swap_swap	swap.c	/^void	swap_swap(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f	typeref:typename:void
 swap	swap.c	/^void	swap(t_dblylst **stack)$/;"	f	typeref:typename:void
 t_array	include/libft/include/libft.h	/^}	t_array;$/;"	t	typeref:struct:s_array

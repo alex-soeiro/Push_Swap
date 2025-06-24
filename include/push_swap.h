@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/24 17:29:20 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/24 21:55:26 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,16 @@ typedef struct s_tmp
 	t_dblylst	*n_8;
 }	t_tmp;
 
+// PARSING //
+
 int				error_message(int error_code);
 t_dblylst		*createstack_a(char **nums);
+int				is_only_numbers(char **nums);
+int				is_repeated_number(char **nums);
+int				is_int(char **nums);
+int				is_int(char **nums);
+int				is_only_spaces(char *argv);
+int				parse(int argc, char **argv, char ***nums);
 
 // MOVEMENTS //
 

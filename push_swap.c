@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/24 19:51:56 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/24 21:47:20 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,47 +31,16 @@ void	print_stack(t_dblylst *stack)
 
 int	main(int argc, char **argv)
 {
-	int				i;
-	char			**nums;
+	int			parsing_ko;
+	char		**nums;
 	t_dblylst	*stack_a;
 	t_dblylst	*stack_b;
 
-	i = 1;
+	stack_a = NULL;
 	stack_b = NULL;
-	// if no arguments given
-	if (argc == 1)
-		return (0);
-
-	// if at least one argument is empty
-	while (argv[i])
-		if (argv[i++][0] == '\0')
-			return (error_message(1));
-	i = 0;
-	// if at least one argument is only spaces
-	while (argv[i])
-		if (is_only_spaces(argv[i++]))
-			return (error_message(1));
-	i = 0;
-	while (argv[i])
-	{
-		if (is_only_spaces(argv[i++]))
-			return (error_message(1));
-	}
-	i = 0;
-
-	// if arguments given
-	nums = split_args(argv, argc);
-
-	// Parse the arguments given
-	if (!is_only_numbers(nums)) return (ft_free_matrix(nums), error_message(2));
-
-	// Check if every number is within int range
-	if (!is_int(nums))
-		return (error_message(4));
-
-	// Check if every number is unique
-	if (is_repeated_number(nums))
-		return (ft_free_matrix(nums), error_message(3));
+	parsing_ko = parse(argc, argv, &nums);
+	if (parsing_ko)
+		return (parsing_ko);
 
 	// Create stack 
 	stack_a = createstack_a(nums);
