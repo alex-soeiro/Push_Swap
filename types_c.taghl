@@ -1,8 +1,8 @@
-syn keyword CTagsStructure s_array s_tmp s_list s_doublylist
-syn keyword CTagsMember length n_1 n_3 n_4 n_7 content prev n_6 n_5 n_2 n_8 next array
-syn keyword CTagsFunction ft_dblylst_addback ft_memmove ft_nlen ft_strtrim push ft_toupper push_to_empty ft_strncmp ft_putnbr_fd calculate_length ft_encrypt ft_memset ft_strmapi ft_printunsign_nbr ft_countwords ft_dblylst_size ft_memchr push_to_loaded ft_strjoin ft_printf ft_strlen ft_atol ft_tolower ft_putendl_fd ft_lstlast reverse_rotate_rotate ft_isascii populate_array ft_printchar ft_readline ft_free_matrix ft_lstdelone ft_printstr ft_itoa createstack_a ft_strrchr ft_printadd ft_strdup rotate_rotate
-syn keyword CTagsFunction ft_lstclear ft_isalpha ft_writeline ft_issign ft_memcmp split_args ft_strnstr ft_lstmap ft_atoi ft_isspace ft_memcpy ft_clear ft_putchar_fd ft_bzero print_stack ft_isalnum rotate reverse_rotate ft_printnbr ft_strcpy ft_strchr ft_removeline ft_isdigit ft_strlcpy ft_found_newline ft_lstiter ft_populate merge is_int swap_swap ft_calloc error_message ft_striteri main ft_printarg ft_strcmp is_repeated_number ft_substr merge_sort ft_lstadd_back ft_lstsize swap ft_printhex ft_dblylst_new
-syn keyword CTagsFunction get_next_line ft_lstadd_front ft_strlcat is_only_numbers ft_isprint ft_dblylst_clear ft_dblylst_last ft_split ft_putstr_fd ft_lstnew
-syn keyword CTagsType t_doublylist t_list t_array t_tmp
-syn keyword CTagsDefinedName BUFFER_SIZE PUSH_SWAP_H LIBFT_H
+syn keyword CTagsStructure s_tmp s_list s_dblylst s_array
+syn keyword CTagsMember n_1 n_4 n_7 next length n_6 prev array n_5 n_2 n_8 n_3 content
+syn keyword CTagsFunction ft_strnstr main ft_countwords ft_strrchr ft_issign ft_lstdelone push_to_empty ft_dblylst_clear ft_printarg ft_lstadd_back is_only_spaces ft_clear ft_lstmap ft_putendl_fd ft_isprint ft_lstsize ft_writeline ft_split ft_strtrim ft_striteri ft_strchr ft_memcpy ft_atol ft_strmapi ft_encrypt ft_putchar_fd ft_isalpha error_message ft_readline is_only_numbers ft_printchar ft_memchr ft_found_newline ft_toupper ft_isdigit createstack_a ft_strlen ft_lstiter ft_putstr_fd ft_dblylst_size
+syn keyword CTagsFunction ft_printnbr rotate_rotate ft_lstnew ft_printadd ft_dblylst_last ft_printstr ft_dblylst_new ft_strcmp rotate ft_strlcat ft_isascii ft_isalnum ft_lstlast swap ft_free_matrix ft_substr ft_strjoin ft_bzero ft_calloc ft_strncmp ft_printf ft_isspace ft_putnbr_fd ft_dblylst_addback ft_lstadd_front ft_strdup merge_sort populate_array split_args ft_memmove ft_removeline is_int ft_populate ft_atoi merge ft_tolower is_repeated_number ft_strlcpy push_to_loaded ft_lstclear ft_printhex push
+syn keyword CTagsFunction print_stack ft_memset ft_itoa reverse_rotate ft_strcpy ft_memcmp ft_nlen reverse_rotate_rotate swap_swap get_next_line ft_printunsign_nbr calculate_length
+syn keyword CTagsType t_tmp t_dblylst t_array t_list
+syn keyword CTagsDefinedName LIBFT_H BUFFER_SIZE PUSH_SWAP_H
 

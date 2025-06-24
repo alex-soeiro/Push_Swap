@@ -12,9 +12,9 @@
 
 #include "../include/libft.h" 
 
-void	ft_dblylst_addback(t_doublylist *dblylst, t_doublylist *new)
+void	ft_dblylst_addback(t_dblylst *dblylst, t_dblylst *new)
 {
-	t_doublylist	*last;
+	t_dblylst	*last;
 
 	last = ft_dblylst_last(dblylst);
 	dblylst->prev = new;

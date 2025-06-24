@@ -12,11 +12,11 @@
 
 #include "../include/libft.h"
 
-t_doublylist	*ft_dblylst_new(void *content)
+t_dblylst	*ft_dblylst_new(void *content)
 {
-	t_doublylist	*new_node;
+	t_dblylst	*new_node;
 
-	new_node = (t_doublylist *) malloc(sizeof(t_doublylist));
+	new_node = (t_dblylst *) malloc(sizeof(t_dblylst));
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;

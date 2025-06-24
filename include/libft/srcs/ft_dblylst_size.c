@@ -6,16 +6,16 @@
 /*   By: avieira- <aiviera-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 18:43:38 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/22 20:13:29 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/24 16:59:27 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-int	ft_dblylst_size(t_doublylist *dblylst)
+int	ft_dblylst_size(t_dblylst *dblylst)
 {
 	int				size;
-	t_doublylist	*dblylst_iter;
+	t_dblylst		*dblylst_iter;
 
 	size = 0;
 	dblylst_iter = dblylst;
@@ -31,4 +31,3 @@ int	ft_dblylst_size(t_doublylist *dblylst)
 	}
 	return (size);
 }
-

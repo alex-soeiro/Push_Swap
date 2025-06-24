@@ -13,27 +13,27 @@
 #include "include/libft/include/libft.h"
 #include "include/push_swap.h"
 
-void	rotate(t_doublylist **stack)
+void	rotate(t_dblylst **stack)
 {
 	if (*stack == NULL)
 		return ;
 	*stack = (*stack)->next;
 }
 
-void	reverse_rotate(t_doublylist **stack)
+void	reverse_rotate(t_dblylst **stack)
 {
 	if (*stack == NULL)
 		return ;
 	*stack = (*stack)->prev;
 }
 
-void	rotate_rotate(t_doublylist **stack_a, t_doublylist **stack_b)
+void	rotate_rotate(t_dblylst **stack_a, t_dblylst **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
 }
 
-void	reverse_rotate_rotate(t_doublylist **stack_a, t_doublylist **stack_b)
+void	reverse_rotate_rotate(t_dblylst **stack_a, t_dblylst **stack_b)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);

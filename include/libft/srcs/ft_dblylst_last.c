@@ -12,9 +12,9 @@
 
 #include "../include/libft.h"
 
-t_doublylist	*ft_dblylst_last(t_doublylist *dblylst)
+t_dblylst	*ft_dblylst_last(t_dblylst *dblylst)
 {
-	t_doublylist	*dblylst_iter;
+	t_dblylst	*dblylst_iter;
 
 	dblylst_iter = dblylst;
 	while (dblylst_iter->next != dblylst)

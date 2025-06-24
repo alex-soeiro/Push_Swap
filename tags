@@ -14,9 +14,9 @@ LIBFT_H	include/libft/include/libft.h	/^# define LIBFT_H$/;"	d
 PUSH_SWAP_H	include/push_swap.h	/^# define PUSH_SWAP_H$/;"	d
 array	include/libft/include/libft.h	/^	int				*array;$/;"	m	struct:s_array	typeref:typename:int *
 calculate_length	include/libft/srcs/ft_itoa.c	/^static int	calculate_length(int n)$/;"	f	typeref:typename:int	file:
-content	include/libft/include/libft.h	/^	void				*content;$/;"	m	struct:s_doublylist	typeref:typename:void *
+content	include/libft/include/libft.h	/^	void				*content;$/;"	m	struct:s_dblylst	typeref:typename:void *
 content	include/libft/include/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
-createstack_a	createstack_a.c	/^t_doublylist	*createstack_a(char **nums)$/;"	f	typeref:typename:t_doublylist *
+createstack_a	createstack_a.c	/^t_dblylst	*createstack_a(char **nums)$/;"	f	typeref:typename:t_dblylst *
 error_message	error_message.c	/^int	error_message(int error_code)$/;"	f	typeref:typename:int
 ft_atoi	include/libft/srcs/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f	typeref:typename:int
 ft_atol	include/libft/srcs/ft_atol.c	/^long int	ft_atol(char *nptr)$/;"	f	typeref:typename:long int
@@ -24,11 +24,11 @@ ft_bzero	include/libft/srcs/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	
 ft_calloc	include/libft/srcs/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
 ft_clear	include/libft/srcs/ft_split.c	/^static char	**ft_clear(char **split, int i)$/;"	f	typeref:typename:char **	file:
 ft_countwords	include/libft/srcs/ft_split.c	/^static int	ft_countwords(char const *s, char c)$/;"	f	typeref:typename:int	file:
-ft_dblylst_addback	include/libft/srcs/ft_dblylst_addback.c	/^void	ft_dblylst_addback(t_doublylist *dblylst, t_doublylist *new)$/;"	f	typeref:typename:void
-ft_dblylst_clear	include/libft/srcs/ft_dblylst_clear.c	/^void	ft_dblylst_clear(t_doublylist *dblylst)$/;"	f	typeref:typename:void
-ft_dblylst_last	include/libft/srcs/ft_dblylst_last.c	/^t_doublylist	*ft_dblylst_last(t_doublylist *dblylst)$/;"	f	typeref:typename:t_doublylist *
-ft_dblylst_new	include/libft/srcs/ft_dblylst_new.c	/^t_doublylist	*ft_dblylst_new(void *content)$/;"	f	typeref:typename:t_doublylist *
-ft_dblylst_size	include/libft/srcs/ft_dblylst_size.c	/^int	ft_dblylst_size(t_doublylist *dblylst)$/;"	f	typeref:typename:int
+ft_dblylst_addback	include/libft/srcs/ft_dblylst_addback.c	/^void	ft_dblylst_addback(t_dblylst *dblylst, t_dblylst *new)$/;"	f	typeref:typename:void
+ft_dblylst_clear	include/libft/srcs/ft_dblylst_clear.c	/^void	ft_dblylst_clear(t_dblylst *dblylst)$/;"	f	typeref:typename:void
+ft_dblylst_last	include/libft/srcs/ft_dblylst_last.c	/^t_dblylst	*ft_dblylst_last(t_dblylst *dblylst)$/;"	f	typeref:typename:t_dblylst *
+ft_dblylst_new	include/libft/srcs/ft_dblylst_new.c	/^t_dblylst	*ft_dblylst_new(void *content)$/;"	f	typeref:typename:t_dblylst *
+ft_dblylst_size	include/libft/srcs/ft_dblylst_size.c	/^int	ft_dblylst_size(t_dblylst *dblylst)$/;"	f	typeref:typename:int
 ft_encrypt	include/libft/srcs/ft_strmapi.c	/^char	ft_encrypt(unsigned int i, char c)$/;"	f	typeref:typename:char
 ft_found_newline	include/libft/srcs/get_next_line_utils.c	/^int	ft_found_newline(char *line)$/;"	f	typeref:typename:int
 ft_free_matrix	include/libft/srcs/ft_free_matrix.c	/^void	ft_free_matrix(char **matrix)$/;"	f	typeref:typename:void
@@ -90,41 +90,46 @@ ft_tolower	include/libft/srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref
 ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
 ft_writeline	include/libft/srcs/get_next_line.c	/^char	*ft_writeline(char *line, char *buf)$/;"	f	typeref:typename:char *
 get_next_line	include/libft/srcs/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+is_int	parsing.c	/^int is_int(char **nums)$/;"	f	typeref:typename:int
 is_int	push_swap.c	/^int	is_int(char **nums)$/;"	f	typeref:typename:int
+is_only_numbers	parsing.c	/^int is_only_numbers(char **nums)$/;"	f	typeref:typename:int
 is_only_numbers	push_swap.c	/^int	is_only_numbers(char **nums)$/;"	f	typeref:typename:int
-is_repeated_number	push_swap.c	/^int	is_repeated_number(char **nums)$/;"	f	typeref:typename:int
+is_only_spaces	parsing.c	/^int is_only_spaces(char *argv)$/;"	f	typeref:typename:int
+is_only_spaces	push_swap.c	/^int	is_only_spaces(char *argv)$/;"	f	typeref:typename:int
+is_repeated_number	parsing.c	/^int is_repeated_number(char **nums)$/;"	f	typeref:typename:int
+is_repeated_number	push_swap.c	/^int	is_repeated_number(t_dblylst *stack_a)$/;"	f	typeref:typename:int
 length	include/libft/include/libft.h	/^	int				length;$/;"	m	struct:s_array	typeref:typename:int
 main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
 merge_sort	include/libft/srcs/merge_sort.c	/^void	merge_sort(t_array middle)$/;"	f	typeref:typename:void
 merge	include/libft/srcs/merge_sort.c	/^void	merge(t_array left, t_array middle, t_array right)$/;"	f	typeref:typename:void
-n_1	include/push_swap.h	/^	t_doublylist	*n_1;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_2	include/push_swap.h	/^	t_doublylist	*n_2;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_3	include/push_swap.h	/^	t_doublylist	*n_3;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_4	include/push_swap.h	/^	t_doublylist	*n_4;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_5	include/push_swap.h	/^	t_doublylist	*n_5;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_6	include/push_swap.h	/^	t_doublylist	*n_6;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_7	include/push_swap.h	/^	t_doublylist	*n_7;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-n_8	include/push_swap.h	/^	t_doublylist	*n_8;$/;"	m	struct:s_tmp	typeref:typename:t_doublylist *
-next	include/libft/include/libft.h	/^	struct s_doublylist	*next;$/;"	m	struct:s_doublylist	typeref:struct:s_doublylist *
+n_1	include/push_swap.h	/^	t_dblylst	*n_1;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_2	include/push_swap.h	/^	t_dblylst	*n_2;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_3	include/push_swap.h	/^	t_dblylst	*n_3;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_4	include/push_swap.h	/^	t_dblylst	*n_4;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_5	include/push_swap.h	/^	t_dblylst	*n_5;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_6	include/push_swap.h	/^	t_dblylst	*n_6;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_7	include/push_swap.h	/^	t_dblylst	*n_7;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+n_8	include/push_swap.h	/^	t_dblylst	*n_8;$/;"	m	struct:s_tmp	typeref:typename:t_dblylst *
+next	include/libft/include/libft.h	/^	struct s_dblylst	*next;$/;"	m	struct:s_dblylst	typeref:struct:s_dblylst *
 next	include/libft/include/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
 populate_array	include/libft/srcs/ft_itoa.c	/^static char	*populate_array(char *array, int i, int n)$/;"	f	typeref:typename:char *	file:
-prev	include/libft/include/libft.h	/^	struct s_doublylist	*prev;$/;"	m	struct:s_doublylist	typeref:struct:s_doublylist *
-print_stack	push_swap.c	/^void	print_stack(t_doublylist *stack)$/;"	f	typeref:typename:void
-push_to_empty	push.c	/^void	push_to_empty(t_doublylist **stack_x, t_doublylist **stack_y)$/;"	f	typeref:typename:void
-push_to_loaded	push.c	/^void	push_to_loaded(t_doublylist **stack_x, t_doublylist **stack_y)$/;"	f	typeref:typename:void
-push	push.c	/^void	push(t_doublylist **stack_x, t_doublylist **stack_y)$/;"	f	typeref:typename:void
-reverse_rotate_rotate	rotate.c	/^void	reverse_rotate_rotate(t_doublylist **stack_a, t_doublylist **stack_b)$/;"	f	typeref:typename:void
-reverse_rotate	rotate.c	/^void	reverse_rotate(t_doublylist **stack)$/;"	f	typeref:typename:void
-rotate_rotate	rotate.c	/^void	rotate_rotate(t_doublylist **stack_a, t_doublylist **stack_b)$/;"	f	typeref:typename:void
-rotate	rotate.c	/^void	rotate(t_doublylist **stack)$/;"	f	typeref:typename:void
+prev	include/libft/include/libft.h	/^	struct s_dblylst	*prev;$/;"	m	struct:s_dblylst	typeref:struct:s_dblylst *
+print_stack	push_swap.c	/^void	print_stack(t_dblylst *stack)$/;"	f	typeref:typename:void
+push_to_empty	push.c	/^void	push_to_empty(t_dblylst **stack_x, t_dblylst **stack_y)$/;"	f	typeref:typename:void
+push_to_loaded	push.c	/^void	push_to_loaded(t_dblylst **stack_x, t_dblylst **stack_y)$/;"	f	typeref:typename:void
+push	push.c	/^void	push(t_dblylst **stack_x, t_dblylst **stack_y)$/;"	f	typeref:typename:void
+reverse_rotate_rotate	rotate.c	/^void	reverse_rotate_rotate(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f	typeref:typename:void
+reverse_rotate	rotate.c	/^void	reverse_rotate(t_dblylst **stack)$/;"	f	typeref:typename:void
+rotate_rotate	rotate.c	/^void	rotate_rotate(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f	typeref:typename:void
+rotate	rotate.c	/^void	rotate(t_dblylst **stack)$/;"	f	typeref:typename:void
 s_array	include/libft/include/libft.h	/^typedef struct s_array$/;"	s
-s_doublylist	include/libft/include/libft.h	/^typedef struct s_doublylist$/;"	s
+s_dblylst	include/libft/include/libft.h	/^typedef struct s_dblylst$/;"	s
 s_list	include/libft/include/libft.h	/^typedef struct s_list$/;"	s
 s_tmp	include/push_swap.h	/^typedef struct s_tmp$/;"	s
 split_args	push_swap.c	/^char	**split_args(char **argv, int argc)$/;"	f	typeref:typename:char **
-swap_swap	swap.c	/^void	swap_swap(t_doublylist **stack_a, t_doublylist **stack_b)$/;"	f	typeref:typename:void
-swap	swap.c	/^void	swap(t_doublylist **stack)$/;"	f	typeref:typename:void
+swap_swap	swap.c	/^void	swap_swap(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f	typeref:typename:void
+swap	swap.c	/^void	swap(t_dblylst **stack)$/;"	f	typeref:typename:void
 t_array	include/libft/include/libft.h	/^}	t_array;$/;"	t	typeref:struct:s_array
-t_doublylist	include/libft/include/libft.h	/^}	t_doublylist;$/;"	t	typeref:struct:s_doublylist
+t_dblylst	include/libft/include/libft.h	/^}	t_dblylst;$/;"	t	typeref:struct:s_dblylst
 t_list	include/libft/include/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
 t_tmp	include/push_swap.h	/^}	t_tmp;$/;"	t	typeref:struct:s_tmp

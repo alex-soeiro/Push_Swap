@@ -13,7 +13,7 @@
 #include "include/libft/include/libft.h"
 #include "include/push_swap.h"
 
-void	push_to_loaded(t_doublylist **stack_x, t_doublylist **stack_y)
+void	push_to_loaded(t_dblylst **stack_x, t_dblylst **stack_y)
 {
 	t_tmp	tmp;
 
@@ -32,7 +32,7 @@ void	push_to_loaded(t_doublylist **stack_x, t_doublylist **stack_y)
 	(*stack_y) = tmp.n_4;
 }
 
-void	push_to_empty(t_doublylist **stack_x, t_doublylist **stack_y)
+void	push_to_empty(t_dblylst **stack_x, t_dblylst **stack_y)
 {
 	t_tmp	tmp;
 
@@ -47,7 +47,7 @@ void	push_to_empty(t_doublylist **stack_x, t_doublylist **stack_y)
 	(*stack_y)->next = tmp.n_3;
 }
 
-void	push(t_doublylist **stack_x, t_doublylist **stack_y)
+void	push(t_dblylst **stack_x, t_dblylst **stack_y)
 {
 	int		x_size;
 	int		y_size;
