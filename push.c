@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:15:37 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/24 13:27:10 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/25 18:32:38 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	push_to_empty(t_dblylst **stack_x, t_dblylst **stack_y)
 	(*stack_y)->next = tmp.n_3;
 }
 
-void	push(t_dblylst **stack_x, t_dblylst **stack_y)
+int	push(t_dblylst **stack_x, t_dblylst **stack_y)
 {
 	int		x_size;
 	int		y_size;
@@ -55,11 +55,24 @@ void	push(t_dblylst **stack_x, t_dblylst **stack_y)
 	x_size = ft_dblylst_size((*stack_x));
 	y_size = ft_dblylst_size((*stack_y));
 	if (x_size == 0)
-		return ;
+		return (x_size);
 	if (y_size == 0)
 		push_to_empty(stack_x, stack_y);
 	else
 		push_to_loaded(stack_x, stack_y);
 	if (x_size == 1)
 		(*stack_x) = NULL;
+	return (x_size);
+}
+
+void	pa(t_dblylst **stack_a, t_dblylst **stack_b)
+{
+	if (push(stack_a, stack_b))
+		ft_printstr(PA);
+}
+
+void	pb(t_dblylst **stack_a, t_dblylst **stack_b)
+{
+	if (push(stack_b, stack_a))
+		ft_printstr(PB);
 }

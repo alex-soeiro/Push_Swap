@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 17:34:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/24 22:16:12 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/25 16:33:25 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,6 @@ char	**split_args(char **argv, int argc)
 	return (free(args), split);
 }
 
-int	is_int(char **nums)
-{
-	while (*nums)
-	{
-		if (ft_atol(*nums) > INT_MAX || ft_atol(*(nums++)) < INT_MIN)
-			return (0);
-	} return (1); }
-
 int	is_only_spaces(char *argv)
 {
 	while (*argv)
@@ -97,24 +89,20 @@ int	parse(int argc, char **argv, char ***nums)
 
 	i = 1;
 	if (argc == 1)
-		return (0);
+		return (1);
 	while (argv[i])
 		if (argv[i++][0] == '\0')
-			return (error_message(1));
+			return (error_message(2));
 	i = 0;
 	while (argv[i])
 		if (is_only_spaces(argv[i++]))
-			return (error_message(1));
-	i = 0;
-	while (argv[i])
-		if (is_only_spaces(argv[i++]))
-			return (error_message(1));
+			return (error_message(3));
 	*nums = split_args(argv, argc);
 	if (!is_only_numbers(*nums))
-		return (ft_free_matrix(*nums), error_message(2));
-	if (!is_int(*nums))
-		return (error_message(4));
+		return (ft_free_matrix(*nums), error_message(4));
+	if (!ft_is_int(*nums))
+		return (error_message(5));
 	if (is_repeated_number(*nums))
-		return (ft_free_matrix(*nums), error_message(3));
+		return (ft_free_matrix(*nums), error_message(5));
 	return (0);
 }

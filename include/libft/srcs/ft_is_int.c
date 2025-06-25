@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_message.c                                    :+:      :+:    :+:   */
+/*   ft_is_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 17:02:14 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/25 16:41:17 by avieira-         ###   ########.fr       */
+/*   Created: 2025/06/25 16:31:37 by avieira-          #+#    #+#             */
+/*   Updated: 2025/06/25 16:36:17 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
-#include "include/libft/include/libft.h"
+#include "../include/libft.h"
 
-int	error_message(int error_code)
+int	ft_is_int(char **array)
 {
-	ft_printf("Error\n");
-	return (error_code);
+	while (*array)
+	{
+		if (ft_atol(*array) > INT_MAX || ft_atol(*(array++)) < INT_MIN)
+			return (0);
+	}
+	return (1);
 }
