@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 20:35:26 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/21 15:41:08 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/26 15:25:56 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	merge(t_array left, t_array middle, t_array right)
 			&& left.array[l] <= right.array[r])
 			middle.array[m++] = left.array[l++];
 		else if (r < right.length && l < left.length
-			&& right.array[r] <= left.array[l])
+				&& right.array[r] <= left.array[l])
 			middle.array[m++] = right.array[r++];
 		else if (l < left.length && r >= right.length)
 			middle.array[m++] = left.array[l++];
@@ -65,3 +65,22 @@ void	merge(t_array left, t_array middle, t_array right)
 	free(left.array);
 	free(right.array);
 }
+/*
+int  main(int argc, char **argv)
+{
+	int          i;
+	int          j;
+	t_array      middle;
+
+	i = 1;
+	j = 0;
+	middle.length = argc - 1;
+	middle.array = malloc((argc - 1) * sizeof(int));
+	while (i < argc)
+		middle.array[j++] = ft_atoi(argv[i++]);
+	i = 0;
+	merge_sort(middle);
+	while (i < argc - 1)
+		ft_printf("%i, ", middle.array[i++]);
+	free(middle.array);
+}*/
