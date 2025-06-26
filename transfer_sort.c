@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/26 19:41:43 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/26 19:47:51 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	{
 		j = 0;
 		stack_a_iter = *stack_a;
-		while ( *(int *) stack_a_iter->content != ordered.array[i] && *stack_a)
+		while ( *(int *) stack_a_iter->content != ordered.array[i])
 		{
 			stack_a_iter = stack_a_iter->next;
 			j++;
