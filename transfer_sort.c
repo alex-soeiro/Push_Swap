@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/26 19:47:51 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/26 23:41:46 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	}
 	i = -1;
 	size = ft_dblylst_size(*stack_b) + 1;
-	while (i++ <= size--)
+	while (i++ <= size)
 		pb(stack_a, stack_b);
 }
