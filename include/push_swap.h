@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/25 18:28:56 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/26 17:36:27 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,10 @@ void			ss(t_dblylst **stack_a, t_dblylst **stack_b);
 int				push(t_dblylst **stack_x, t_dblylst **stack_y);
 void			pa(t_dblylst **stack_a, t_dblylst **stack_b);
 void			pb(t_dblylst **stack_a, t_dblylst **stack_b);
+
+// TRANSFER_SORT //
+
+void	transfer(t_dblylst **stack_a, t_dblylst **stack_b, int size, int position);
+void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
 
 #endif

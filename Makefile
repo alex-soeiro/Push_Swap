@@ -6,12 +6,12 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 13:49:06 by avieira-	       #+#    #+#              #
-#    Updated: 2025/06/25 18:26:43 by avieira-         ###   ########.fr        #
+#    Updated: 2025/06/26 17:37:05 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 compile: libft
-	cc push_swap.c parse.c error_message.c createstack_a.c rotate.c reverse_rotate.c swap.c push.c include/libft/libft.a -g
+	cc push_swap.c parse.c error_message.c createstack_a.c rotate.c reverse_rotate.c swap.c push.c transfer_sort.c include/libft/libft.a -g
 
 libft:
 	make -C include/libft/

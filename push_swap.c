@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/26 15:28:18 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/26 18:17:40 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,80 +74,15 @@ int	main(int argc, char **argv)
 	parsing_ko = parse(argc, argv, &nums);
 	if (parsing_ko)
 		return (parsing_ko);
-
-	// Normalize
 	ordered = normalize(argc, argv);
-
-	// Create stack 
 	stack_a = createstack_a(nums);
-
 	if (is_ordered(ordered, stack_a))
 	{
 		print_stack(stack_a);
 		return (free(ordered.array), ft_dblylst_clear(stack_a), 0);
 	}
+	transfer_sort(&stack_a, &stack_b, ordered);
+	print_stack(stack_a);
+	ft_dblylst_clear(stack_a);	
 	free(ordered.array);
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-
-	// DEBUG: Print stack a
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-	ft_printf("stack_b: ");
-	print_stack(stack_b);
-
-	// DEBUG MOVEMENTS
-
-	/* Rotate */
-	ft_printf("\n\nROTATE\n");
-	ra(&stack_a);
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-
-	/* Rotate_Rotate */
-	ft_printf("\n\nROTATE_ROTATE\n");
-	rr(&stack_a, &stack_b);
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-	ft_printf("stack_b: ");
-	print_stack(stack_b);
-
-	/* Reverse_Rotate */
-	ft_printf("\n\nREVERSE_ROTATE\n");
-	ft_printf("stack_a: ");
-	rra(&stack_a);
-	print_stack(stack_a);
-
-	/* Swap */
-	ft_printf("\n\nSWAP\n");
-	sa(&stack_a);
-	ft_printf("stack_a:");
-	print_stack(stack_a);
-	ft_printf("stack_a:");
-	sa(&stack_a);
-	print_stack(stack_a);
-
-	/* Swap_Swap */
-	ft_printf("\n\nSWAP_SWAP\n");
-	ss(&stack_a, &stack_b);
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-	ft_printf("stack_b: ");
-	print_stack(stack_b);
-
-	/* Push */
-	ft_printf("\n\nPUSH\n");
-	pa(&stack_a, &stack_b);
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-	ft_printf("stack_b: ");
-	print_stack(stack_b);
-	pb(&stack_a, &stack_b);
-	ft_printf("stack_a: ");
-	print_stack(stack_a);
-	ft_printf("stack_b: ");
-	print_stack(stack_b);
-
-	// Free stack a
-	ft_dblylst_clear(stack_a);
 }
