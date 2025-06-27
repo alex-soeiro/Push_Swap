@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft/include/libft.h"
-#include "include/push_swap.h"
+#include "../include/libft/include/libft.h"
+#include "../include/push_swap.h"
 
 void	transfer(t_dblylst **stack_a, t_dblylst **stack_b, int position)
 {

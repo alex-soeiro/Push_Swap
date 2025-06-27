@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "include/push_swap.h"
-#include "include/libft/include/libft.h"
+#include "../include/push_swap.h"
+#include "../include/libft/include/libft.h"
 
 t_array	normalize(int argc, char **argv)
 {

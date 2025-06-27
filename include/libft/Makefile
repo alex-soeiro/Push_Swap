@@ -6,7 +6,7 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/21 12:18:39 by avieira-          #+#    #+#              #
-#    Updated: 2025/06/25 16:31:13 by avieira-         ###   ########.fr        #
+#    Updated: 2025/06/27 17:35:36 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ $(NAME): $(OBJS)
 		cc $(CFLAGS) -c $^ -o $@
 
 clean: 
-		rm -f .bonus $(OBJS) $(B_OBJS)
+		rm -f $(OBJS)
 
 fclean: clean
 		rm -f $(NAME)

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft/include/libft.h"
-#include "include/push_swap.h"
+#include "../include/libft/include/libft.h"
+#include "../include/push_swap.h"
 
 void	reverse_rotate(t_dblylst **stack)
 {

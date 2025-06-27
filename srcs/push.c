@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft/include/libft.h"
-#include "include/push_swap.h"
+#include "../include/libft/include/libft.h"
+#include "../include/push_swap.h"
 
 void	push_to_loaded(t_dblylst **stack_x, t_dblylst **stack_y)
 {

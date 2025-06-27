@@ -6,19 +6,43 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 13:49:06 by avieira-	       #+#    #+#              #
-#    Updated: 2025/06/26 17:37:05 by avieira-         ###   ########.fr        #
+#    Updated: 2025/06/27 18:01:57 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-compile: libft
-	cc push_swap.c parse.c error_message.c createstack_a.c rotate.c reverse_rotate.c swap.c push.c transfer_sort.c include/libft/libft.a -g
+CFLAGS = -Wall -Wextra -Werror
+NAME = push_swap
+SRCS = srcs/push_swap.c srcs/parse.c srcs/error_message.c srcs/createstack_a.c srcs/rotate.c
+SRCS += srcs/reverse_rotate.c srcs/swap.c srcs/push.c srcs/transfer_sort.c
+OBJS += $(SRCS:.c=.o)
+
+compile: libft $(NAME) $(OBJS)
+	cc $(CFLAGS) $(SRCS) include/libft/libft.a -g -o $(NAME)
+	rm -rf include/libft/srcs/*.o
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+clean: 
+	rm -rf $(SRCS)
+
+fclean: clean fclean_libft
+	rm -f $(NAME)
 
 libft:
 	make -C include/libft/
 
 clean_libft:
 	make clean -C include/libft/
+
 fclean_libft:
 	make fclean -C include/libft/
 
-
+visualizer:
+	git clone https://github.com/o-reo/push_swap_visualizer.git && \
+		cd push_swap_visualizer && \
+		mkdir build && \
+		cd build && \
+		cmake .. && \
+		make && \
+		./bin/visualizer
