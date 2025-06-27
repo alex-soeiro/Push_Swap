@@ -6,18 +6,20 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/27 13:25:28 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/27 16:53:14 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft/include/libft.h"
 #include "include/push_swap.h"
 
-void	transfer(t_dblylst **stack_a, t_dblylst **stack_b, int size, int position)
+void	transfer(t_dblylst **stack_a, t_dblylst **stack_b, int position)
 {
 	int	i;
+	int size;
 
 	i = 0;
+	size = ft_dblylst_size(*stack_a);
 	if (position <= size / 2)
 		while (i < position)
 		{
@@ -41,8 +43,8 @@ void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	t_dblylst	*stack_a_iter;
 
 	i = -1;
-	size = ft_dblylst_size(*stack_a) + 1;
-	while (i++ <= size--)
+	size = ft_dblylst_size(*stack_a);
+	while (++i < size)
 	{
 		j = 0;
 		stack_a_iter = *stack_a;
@@ -51,7 +53,7 @@ void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 			stack_a_iter = stack_a_iter->next;
 			j++;
 		}
-		transfer(stack_a, stack_b, size, j);
+		transfer(stack_a, stack_b, j);
 	}
 	i = -1;
 	size = ft_dblylst_size(*stack_b) + 1;
