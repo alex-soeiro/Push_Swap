@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/26 18:17:40 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/27 20:05:30 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(int argc, char **argv)
 		return (free(ordered.array), ft_dblylst_clear(stack_a), 0);
 	}
 	transfer_sort(&stack_a, &stack_b, ordered);
-	print_stack(stack_a);
+	//print_stack(stack_a);
 	ft_dblylst_clear(stack_a);	
 	free(ordered.array);
 }
