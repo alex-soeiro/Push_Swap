@@ -6,7 +6,7 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 13:49:06 by avieira-	       #+#    #+#              #
-#    Updated: 2025/06/27 20:29:06 by avieira-         ###   ########.fr        #
+#    Updated: 2025/06/28 15:02:30 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ libft:
 clean_libft:
 	make clean -C include/libft/
 
-fclean_libft:
+fclean_libft: delete_visualizer
 	make fclean -C include/libft/
 
 re: fclean all
@@ -46,6 +46,9 @@ recompile: fclean compile clean
 
 visualize:
 	push_swap_visualizer/build/bin/visualizer
+
+delete_visualizer:
+	rm -rf push_swap_visualizer
 
 install_visualizer:
 	git clone https://github.com/o-reo/push_swap_visualizer.git && \

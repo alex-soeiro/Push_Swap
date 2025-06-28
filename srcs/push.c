@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:15:37 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/27 20:08:05 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 23:00:46 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,20 @@ int	push(t_dblylst **stack_x, t_dblylst **stack_y)
 	return (x_size);
 }
 
-void	pb(t_dblylst **stack_a, t_dblylst **stack_b)
+void	pb(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 {
-	if (push(stack_a, stack_b))
-		ft_printstr(PB);
+	while (times--)
+	{
+		if (push(stack_a, stack_b))
+			ft_printstr(PB);
+	}
 }
 
-void	pa(t_dblylst **stack_a, t_dblylst **stack_b)
+void	pa(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 {
-	if (push(stack_b, stack_a))
-		ft_printstr(PA);
+	while (times--)
+	{
+		if (push(stack_b, stack_a))
+			ft_printstr(PA);
+	}
 }

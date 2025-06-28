@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:57:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/25 18:31:58 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 23:01:47 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,29 @@ int	swap(t_dblylst **stack)
 	return (size);
 }
 
-void	sa(t_dblylst **stack_a)
+void	sa(t_dblylst **stack_a, int times)
 {
-	if (swap(stack_a) > 1)
-		ft_printstr(SA);
+	while(times--)
+	{
+		if (swap(stack_a))
+			ft_printstr(SA);
+	}
 }
 
-void	sb(t_dblylst **stack_b)
+void	sb(t_dblylst **stack_b, int times)
 {
-	if (swap(stack_b) > 1)
-		ft_printstr(SB);
+	while(times--)
+	{
+		if (swap(stack_b) > 0)
+			ft_printstr(SB);
+	}
 }
 
-void	ss(t_dblylst **stack_a, t_dblylst **stack_b)
+void	ss(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 {
-	if (swap(stack_a) > 1 || swap(stack_b) > 1)
-		ft_printstr(SS);
+	while(times--)
+	{
+		if (swap(stack_a) > 1 || swap(stack_b) > 1)
+			ft_printstr(SS);
+	}
 }

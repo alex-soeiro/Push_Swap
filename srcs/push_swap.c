@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/27 20:05:30 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 18:35:07 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ t_array	normalize(int argc, char **argv)
 	i = 1;
 	j = 0;
 	middle.length = argc - 1;
-	middle.array = malloc((argc - 1) * sizeof(int));
+	middle.i_array = malloc((argc - 1) * sizeof(int));
 	while (i < argc)
-		middle.array[j++] = ft_atoi(argv[i++]);
+		middle.i_array[j++] = ft_atoi(argv[i++]);
 	i = 0;
-	merge_sort(middle);
+	i_merge_sort(middle);
 	return (middle);
 }
 
@@ -53,13 +53,12 @@ int	is_ordered(t_array ordered, t_dblylst *stack_a)
 	i = 0;
 	while (i < ordered.length)
 	{
-		if (ordered.array[i++] != *(int *) stack_a->content)
+		if (ordered.i_array[i++] != *(int *) stack_a->content)
 			return (0);
 		stack_a = stack_a->next;
 	}
 	return (1);
 }
-
 
 int	main(int argc, char **argv)
 {
@@ -79,10 +78,10 @@ int	main(int argc, char **argv)
 	if (is_ordered(ordered, stack_a))
 	{
 		print_stack(stack_a);
-		return (free(ordered.array), ft_dblylst_clear(stack_a), 0);
+		return (free(ordered.i_array), ft_dblylst_clear(stack_a), 0);
 	}
 	transfer_sort(&stack_a, &stack_b, ordered);
-	//print_stack(stack_a);
-	ft_dblylst_clear(stack_a);	
-	free(ordered.array);
+	print_stack(stack_a);
+	ft_dblylst_clear(stack_a);
+	free(ordered.i_array);
 }

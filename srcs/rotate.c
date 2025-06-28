@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:40:13 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/25 18:20:47 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 23:01:03 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,35 @@ void	rotate(t_dblylst **stack)
 	*stack = (*stack)->next;
 }
 
-void	ra(t_dblylst **stack_a)
+void	ra(t_dblylst **stack_a, int times)
 {
-	if (*stack_a == NULL)
-		return ;
-	rotate(stack_a);
-	ft_printstr(RA);
+	while (times--)
+	{
+		if (*stack_a == NULL)
+			return ;
+		rotate(stack_a);
+		ft_printstr(RA);
+	}
 }
 
-void	rb(t_dblylst **stack_b)
+void	rb(t_dblylst **stack_b, int times)
 {
-	if (*stack_b == NULL)
-		return ;
-	rotate(stack_b);
-	ft_printstr(RB);
+	while (times--)
+	{
+		if (*stack_b == NULL)
+			return ;
+		rotate(stack_b);
+		ft_printstr(RB);
+	}
 }
 
-void	rr(t_dblylst **stack_a, t_dblylst **stack_b)
+void	rr(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 {
-	rotate(stack_a);
-	rotate(stack_b);
-	if (*stack_a || *stack_b)
-		ft_printstr(RR);
+	while (times--)
+	{
+		rotate(stack_a);
+		rotate(stack_b);
+		if (*stack_a || *stack_b)
+			ft_printstr(RR);
+	}
 }

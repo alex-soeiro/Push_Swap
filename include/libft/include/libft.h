@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:40:52 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/25 16:30:45 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 22:48:08 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@
 
 typedef struct s_array
 {
-	int				*array;
+	int				*i_array;
+	char			*c_array;
 	int				length;
 }	t_array;
 
@@ -41,6 +42,10 @@ typedef struct s_dblylst
 	void				*content;
 	struct s_dblylst	*prev;
 	struct s_dblylst	*next;
+	int					pos;
+	int					moves;
+	int					*target;
+	int					target_pos;
 }	t_dblylst;
 
 /* FT_PRINTF */
@@ -64,8 +69,8 @@ void		ft_removeline(char *buf);
 
 /* SORTING */
 
-void		merge_sort(t_array middle);
-void		merge(t_array left, t_array middle, t_array right);
+void		i_merge_sort(t_array middle);
+void		i_merge(t_array left, t_array middle, t_array right);
 
 /* MEMORY */
 

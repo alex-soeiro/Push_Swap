@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/27 20:00:41 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 23:20:52 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,19 @@
 void	transfer(t_dblylst **stack_a, t_dblylst **stack_b, int position)
 {
 	int	i;
-	int size;
+	int	size;
 
 	i = 0;
 	size = ft_dblylst_size(*stack_a);
 	if (position <= size / 2)
-		while (i < position)
-		{
-			ra(stack_a);
-			i++;
-		}
+	{
+		ra(stack_a, position);
+	}
 	else if (position > size / 2)
-		while (i < size - position)
-		{
-			rra(stack_a);
-			i++;
-		}
-	pb(stack_a, stack_b);
+	{
+		rra(stack_a, size - position);
+	}
+	pb(stack_a, stack_b, 1);
 }
 
 void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
@@ -48,7 +44,7 @@ void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	{
 		j = 0;
 		stack_a_iter = *stack_a;
-		while ( *(int *) stack_a_iter->content != ordered.array[i])
+		while (*(int *) stack_a_iter->content != ordered.i_array[i])
 		{
 			stack_a_iter = stack_a_iter->next;
 			j++;
@@ -57,6 +53,5 @@ void	transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	}
 	i = -1;
 	size = ft_dblylst_size(*stack_b) + 1;
-	while (i++ <= size)
-		pa(stack_a, stack_b);
+	pa(stack_a, stack_b, size);
 }

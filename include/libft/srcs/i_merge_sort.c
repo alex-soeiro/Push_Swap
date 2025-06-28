@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   merge_sort.c                                       :+:      :+:    :+:   */
+/*   i_merge_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 20:35:26 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/26 19:15:08 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 12:14:08 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	merge_sort(t_array middle)
+void	i_merge_sort(t_array middle)
 {
 	t_array	left;
 	t_array	right;
@@ -25,22 +25,22 @@ void	merge_sort(t_array middle)
 	{
 		left.length = middle.length / 2;
 		right.length = middle.length / 2 + middle.length % 2;
-		left.array = malloc(left.length * sizeof(int));
-		right.array = malloc(right.length * sizeof(int));
-		if (!left.array || !right.array)
-			return (free(left.array), free(right.array));
+		left.i_array = malloc(left.length * sizeof(int));
+		right.i_array = malloc(right.length * sizeof(int));
+		if (!left.i_array || !right.i_array)
+			return (free(left.i_array), free(right.i_array));
 		while (i < left.length)
-			left.array[j++] = middle.array[i++];
+			left.i_array[j++] = middle.i_array[i++];
 		j = 0;
 		while (i < middle.length)
-			right.array[j++] = middle.array[i++];
-		merge_sort(left);
-		merge_sort(right);
-		merge(left, middle, right);
+			right.i_array[j++] = middle.i_array[i++];
+		i_merge_sort(left);
+		i_merge_sort(right);
+		i_merge(left, middle, right);
 	}
 }
 
-void	merge(t_array left, t_array middle, t_array right)
+void	i_merge(t_array left, t_array middle, t_array right)
 {
 	int		l;
 	int		m;
@@ -52,22 +52,22 @@ void	merge(t_array left, t_array middle, t_array right)
 	while (m < middle.length)
 	{
 		if (l < left.length && r < right.length
-			&& left.array[l] <= right.array[r])
-			middle.array[m++] = left.array[l++];
+			&& left.i_array[l] <= right.i_array[r])
+			middle.i_array[m++] = left.i_array[l++];
 		else if (r < right.length && l < left.length
-				&& right.array[r] <= left.array[l])
-			middle.array[m++] = right.array[r++];
+			&& right.i_array[r] <= left.i_array[l])
+			middle.i_array[m++] = right.i_array[r++];
 		else if (l < left.length && r >= right.length)
-			middle.array[m++] = left.array[l++];
+			middle.i_array[m++] = left.i_array[l++];
 		else if (r < right.length && l >= left.length)
-			middle.array[m++] = right.array[r++];
+			middle.i_array[m++] = right.i_array[r++];
 	}
-	free(left.array);
-	free(right.array);
+	free(left.i_array);
+	free(right.i_array);
 }
-/*
-int  main(int argc, char **argv)
-{
+/* NEED TO CHECK ALL THE MALLOCS CREATED WITH MERGE SORT
+ * HOW TO HANDLE WHEN A LOT OF MALLOCS WERE CREATED RECURSIVELY AND ONE FAILS?*/
+/* int  main(int argc, char **argv) {
 	int          i;
 	int          j;
 	t_array      middle;
@@ -75,12 +75,11 @@ int  main(int argc, char **argv)
 	i = 1;
 	j = 0;
 	middle.length = argc - 1;
-	middle.array = malloc((argc - 1) * sizeof(int));
-	while (i < argc)
-		middle.array[j++] = ft_atoi(argv[i++]);
+	middle.i_array = malloc((argc - 1) * sizeof(int));
+	while (i < argc) middle.i_array[j++] = ft_atoi(argv[i++]);
 	i = 0;
-	merge_sort(middle);
+	i_merge_sort(middle);
 	while (i < argc - 1)
-		ft_printf("%i, ", middle.array[i++]);
-	free(middle.array);
+		ft_printf("%i, ", middle.i_array[i++]);
+	free(middle.i_array);
 }*/

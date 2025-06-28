@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/27 15:51:39 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/28 18:37:36 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,20 @@ int				parse(int argc, char **argv, char ***nums);
 // MOVEMENTS //
 
 void			rotate(t_dblylst **stack);
-void			ra(t_dblylst **stack_a);
-void			rb(t_dblylst **stack_b);
-void			rr(t_dblylst **stack_a, t_dblylst **stack_b);
+void			ra(t_dblylst **stack_a, int times);
+void			rb(t_dblylst **stack_b, int times);
+void			rr(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 void			reverse_rotate(t_dblylst **stack);
-void			rra(t_dblylst **stack_a);
-void			rrb(t_dblylst **stack_b);
-void			rrr(t_dblylst **stack_a, t_dblylst **stack_b);
+void			rra(t_dblylst **stack_a, int times);
+void			rrb(t_dblylst **stack_b, int times);
+void			rrr(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 int				swap(t_dblylst **stack);
-void			sa(t_dblylst **stack_a);
-void			sb(t_dblylst **stack_b);
-void			ss(t_dblylst **stack_a, t_dblylst **stack_b);
+void			sa(t_dblylst **stack_a, int times);
+void			sb(t_dblylst **stack_b, int times);
+void			ss(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 int				push(t_dblylst **stack_x, t_dblylst **stack_y);
-void			pa(t_dblylst **stack_a, t_dblylst **stack_b);
-void			pb(t_dblylst **stack_a, t_dblylst **stack_b);
+void			pa(t_dblylst **stack_a, t_dblylst **stack_b, int times);
+void			pb(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 
 // TRANSFER_SORT //
 
