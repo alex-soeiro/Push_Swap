@@ -6,20 +6,25 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 12:15:46 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/28 21:38:05 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/29 21:38:34 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft/include/libft.h"
 #include "../include/push_swap.h"
 
-void	transfer(t_dblylst **stack_a, t_dblylst **stack_b)
+void	cost_reset(t_dblylst **stack_a)
 {
-	if (stack_a->position <= size / 2)
-		ra(stack_a, position);
-	else if (stack_a->position > size / 2)
-		rra(stack_a, size - stack_a->position);
-	pb(stack_a, stack_b, 1);
+	int			size;
+	t_dblylst	*stack_a_iter;
+	
+	size = ft_dblylst_size(stack_a);
+	stack_a_iter = *stack_a;
+	while (size --)
+	{
+		stack_a_iter->moves = 0;
+		stack_a_iter = stack_a_iter->next;
+	}
 }
 
 void	little_sort(t_dblylst **stack_a)
@@ -28,7 +33,6 @@ void	little_sort(t_dblylst **stack_a)
 		return ;
 	// algorithm for 3 numbers or less
 	
-	return ;	
 }
 
 void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, int a_size)
@@ -44,7 +48,8 @@ void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, int a_size)
 	while (a_size-- > 3)
 	{
 		calculate_cost(stack_a, stack_b);
-		// Move the cheapest number
+		transfer(stack_a, stack_b);
+		cost_reset(stack_a;
 	}
 	little_sort(stack_a);
 	// Rotate B until sorted
