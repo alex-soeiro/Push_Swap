@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 12:15:46 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/29 21:38:34 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/29 21:41:08 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, int a_size)
 	{
 		calculate_cost(stack_a, stack_b);
 		transfer(stack_a, stack_b);
-		cost_reset(stack_a;
+		cost_reset(stack_a);
 	}
 	little_sort(stack_a);
 	// Rotate B until sorted
