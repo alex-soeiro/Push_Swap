@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 01:51:18 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:40:19 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,16 +72,22 @@ void	ab_rrot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap)
 
 void	transfer_b(t_dblylst **stack_a, t_dblylst **stack_b)
 {
-	int			size;
-	t_dblylst	*cheapest;
+	int			a_size;
+	int			b_size;
+	t_dblylst	*cheap;
 
-	size = ft_dblylst_size(*stack_a);
-	cheapest = get_cheapest(stack_a);
-	if (cheapest->pos <= size / 2
-		&& cheapest->target_pos <= size / 2)
-		ab_rot(stack_a, stack_b, cheapest);
-	else if (cheapest->pos > size / 2
-		&& cheapest->target_pos > size / 2)
-		ab_rrot(stack_a, stack_b, cheapest);
+	a_size = ft_dblylst_size(*stack_a);
+	b_size = ft_dblylst_size(*stack_b);
+	cheap = get_cheapest(stack_a);
+	if (cheap->pos <= a_size / 2
+		&& cheap->target_pos <= b_size / 2)
+		ab_rot(stack_a, stack_b, cheap);
+	else if (cheap->pos > a_size / 2
+		&& cheap->target_pos > b_size / 2)
+		ab_rrot(stack_a, stack_b, cheap);
+	else if (cheap->pos <= a_size / 2 && cheap->target_pos > b_size / 2)
+		(ra(stack_a, cheap->pos), rrb(stack_b, b_size - cheap->target_pos));
+	else if (cheap->pos > a_size / 2 && cheap->target_pos <= b_size / 2)
+		(rrb(stack_a, a_size - cheap->pos), rrb(stack_b, cheap->target_pos));
 	pb(stack_a, stack_b, 1);
 }

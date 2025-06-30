@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 01:48:30 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 11:16:10 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,15 +75,15 @@ void		pb(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 void		sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
 void		little_sort(t_dblylst **stack_a, t_array ordered);
 void		big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
-void		cost_reset(t_dblylst **stack_a);
+void		cost_reset(t_dblylst **stack);
 
 // CALCULATE COST //
 
 void		calculate_cost(t_dblylst **stack_a, t_dblylst **stack_b);
 void		get_moves(t_dblylst *stack_a, t_dblylst **stack_b, int a_size);
 void		economize(t_dblylst *stack_a, int a_size, int b_size, int eco);
-void		get_min(t_dblylst *stack_a, t_dblylst **stack_b);
-void		get_max(t_dblylst *stack_a, t_dblylst **stack_b);
+void		get_bmin(t_dblylst *stack_a, t_dblylst **stack_b);
+void		get_bmax(t_dblylst *stack_a, t_dblylst **stack_b);
 
 // TRANSFER A //
 

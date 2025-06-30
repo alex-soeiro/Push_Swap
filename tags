@@ -26,7 +26,7 @@ calculate_cost	srcs/calc_cost.c	/^void	calculate_cost(t_dblylst **stack_a, t_dbl
 calculate_length	include/libft/srcs/ft_itoa.c	/^static int	calculate_length(int n)$/;"	f	file:
 content	include/libft/include/libft.h	/^	void				*content;$/;"	m	struct:s_dblylst
 content	include/libft/include/libft.h	/^	void			*content;$/;"	m	struct:s_list
-cost_reset	srcs/sort.c	/^void	cost_reset(t_dblylst **stack_a)$/;"	f
+cost_reset	srcs/sort.c	/^void	cost_reset(t_dblylst **stack)$/;"	f
 createstack_a	srcs/createstack_a.c	/^t_dblylst	*createstack_a(char **nums)$/;"	f
 economize	srcs/calc_cost.c	/^void	economize(t_dblylst *stack_a, int a_size, int b_size, int eco)$/;"	f
 error_message	srcs/error_message.c	/^int	error_message(int error_code)$/;"	f
@@ -102,10 +102,13 @@ ft_substr	include/libft/srcs/ft_substr.c	/^char	*ft_substr(char const *s, unsign
 ft_tolower	include/libft/srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_writeline	include/libft/srcs/get_next_line.c	/^char	*ft_writeline(char *line, char *buf)$/;"	f
+get_amax	srcs/get_btarget.c	/^void	get_amax(t_dblylst **stack_a, t_dblylst *stack_b)$/;"	f
+get_amin	srcs/get_btarget.c	/^void	get_amin(t_dblylst **stack_a, t_dblylst *stack_b)$/;"	f
 get_biggest	srcs/organize_b.c	/^int	get_biggest(t_dblylst **stack_b)$/;"	f
+get_bmax	srcs/calc_cost.c	/^void	get_bmax(t_dblylst *stack_a, t_dblylst **stack_b)$/;"	f
+get_bmin	srcs/calc_cost.c	/^void	get_bmin(t_dblylst *stack_a, t_dblylst **stack_b)$/;"	f
+get_btarget	srcs/get_btarget.c	/^void	get_btarget(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f
 get_cheapest	srcs/transfer_b.c	/^t_dblylst	*get_cheapest(t_dblylst **stack_a)$/;"	f
-get_max	srcs/calc_cost.c	/^void	get_max(t_dblylst *stack_a, t_dblylst **stack_b)$/;"	f
-get_min	srcs/calc_cost.c	/^void	get_min(t_dblylst *stack_a, t_dblylst **stack_b)$/;"	f
 get_moves	srcs/calc_cost.c	/^void	get_moves(t_dblylst *stack_a, t_dblylst **stack_b, int a_size)$/;"	f
 get_next_line	include/libft/srcs/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
 get_pos	srcs/organize_b.c	/^int	get_pos(t_dblylst **stack_b, int biggest)$/;"	f
@@ -166,5 +169,4 @@ t_list	include/libft/include/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
 t_tmp	include/push_swap.h	/^}	t_tmp;$/;"	t	typeref:struct:s_tmp
 target_pos	include/libft/include/libft.h	/^	int					target_pos;$/;"	m	struct:s_dblylst
 target	include/libft/include/libft.h	/^	struct s_dblylst	*target;$/;"	m	struct:s_dblylst	typeref:struct:s_dblylst::s_dblylst
-transfer_a	srcs/transfer_a.c	/^void	transfer_a(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f
 transfer_b	srcs/transfer_b.c	/^void	transfer_b(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f

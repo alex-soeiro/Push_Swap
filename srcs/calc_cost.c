@@ -6,14 +6,14 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 11:02:39 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 01:37:16 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:05:34 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft/include/libft.h"
 #include "../include/push_swap.h"
 
-void	get_max(t_dblylst *stack_a, t_dblylst **stack_b)
+void	get_bmax(t_dblylst *stack_a, t_dblylst **stack_b)
 {
 	int			b_size;
 	t_dblylst	*stack_b_iter;
@@ -24,14 +24,14 @@ void	get_max(t_dblylst *stack_a, t_dblylst **stack_b)
 	stack_a->target_pos = 0;
 	while (b_size--)
 	{
-		if (*(int *) stack_a->target->content < *(int *) stack_b_iter->content)
+		if (*(int *)stack_a->target->content < *(int *)stack_b_iter->content)
 			stack_a->target = stack_b_iter;
-		stack_b_iter = stack_b_iter->next;
 		stack_a->target_pos++;
+		stack_b_iter = stack_b_iter->next;
 	}
 }
 
-void	get_min(t_dblylst *stack_a, t_dblylst **stack_b)
+void	get_bmin(t_dblylst *stack_a, t_dblylst **stack_b)
 {
 	int			b_size;
 	t_dblylst	*stack_b_iter;
@@ -43,14 +43,14 @@ void	get_min(t_dblylst *stack_a, t_dblylst **stack_b)
 	while (b_size--)
 	{
 		if (stack_a->target == NULL
-			&& *(int *) stack_b_iter->content < *(int *) stack_a->content)
+			&& *(int *)stack_b_iter->content < *(int *)stack_a->content)
 			stack_a->target = stack_b_iter;
-		else if (*(int *) stack_b_iter->content
-			> *(int *)stack_a->target->content
-			&& *(int *) stack_b_iter->content < *(int *) stack_a->content)
+		else if (stack_a->target != NULL
+			&& *(int *)stack_b_iter->content < *(int *)stack_a->content
+			&& *(int *)stack_b_iter->content > *(int *)stack_a->target->content)
 			stack_a->target = stack_b_iter;
-		stack_b_iter = stack_b_iter->next;
 		stack_a->target_pos++;
+		stack_b_iter = stack_b_iter->next;
 	}
 }
 
@@ -100,9 +100,9 @@ void	calculate_cost(t_dblylst **stack_a, t_dblylst **stack_b)
 	while (i < a_size)
 	{
 		stack_a_iter->pos = i++;
-		get_min(stack_a_iter, stack_b);
+		get_bmin(stack_a_iter, stack_b);
 		if (stack_a_iter->target == NULL)
-			get_max(stack_a_iter, stack_b);
+			get_bmax(stack_a_iter, stack_b);
 		get_moves(stack_a_iter, stack_b, a_size);
 		stack_a_iter = stack_a_iter->next;
 	}
