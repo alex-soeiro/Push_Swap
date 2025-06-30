@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:40:52 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/28 22:48:08 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/30 00:40:02 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ typedef struct s_dblylst
 	void				*content;
 	struct s_dblylst	*prev;
 	struct s_dblylst	*next;
+	struct s_dblylst	*target;
 	int					pos;
 	int					moves;
-	int					*target;
 	int					target_pos;
 }	t_dblylst;
 

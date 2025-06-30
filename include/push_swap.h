@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/28 18:37:36 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/30 01:48:30 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,35 +43,61 @@ typedef struct s_tmp
 
 // PARSING //
 
-int				error_message(int error_code);
-t_dblylst		*createstack_a(char **nums);
-int				is_only_numbers(char **nums);
-int				is_repeated_number(char **nums);
-int				is_int(char **nums);
-int				is_only_spaces(char *argv);
-int				parse(int argc, char **argv, char ***nums);
+int			error_message(int error_code);
+t_dblylst	*createstack_a(char **nums);
+int			is_only_numbers(char **nums);
+int			is_repeated_number(char **nums);
+int			is_int(char **nums);
+int			is_only_spaces(char *argv);
+int			parse(int argc, char **argv, char ***nums);
+int			is_ordered(t_array ordered, t_dblylst *stack);
 
 // MOVEMENTS //
 
-void			rotate(t_dblylst **stack);
-void			ra(t_dblylst **stack_a, int times);
-void			rb(t_dblylst **stack_b, int times);
-void			rr(t_dblylst **stack_a, t_dblylst **stack_b, int times);
-void			reverse_rotate(t_dblylst **stack);
-void			rra(t_dblylst **stack_a, int times);
-void			rrb(t_dblylst **stack_b, int times);
-void			rrr(t_dblylst **stack_a, t_dblylst **stack_b, int times);
-int				swap(t_dblylst **stack);
-void			sa(t_dblylst **stack_a, int times);
-void			sb(t_dblylst **stack_b, int times);
-void			ss(t_dblylst **stack_a, t_dblylst **stack_b, int times);
-int				push(t_dblylst **stack_x, t_dblylst **stack_y);
-void			pa(t_dblylst **stack_a, t_dblylst **stack_b, int times);
-void			pb(t_dblylst **stack_a, t_dblylst **stack_b, int times);
+void		rotate(t_dblylst **stack);
+void		ra(t_dblylst **stack_a, int times);
+void		rb(t_dblylst **stack_b, int times);
+void		rr(t_dblylst **stack_a, t_dblylst **stack_b, int times);
+void		reverse_rotate(t_dblylst **stack);
+void		rra(t_dblylst **stack_a, int times);
+void		rrb(t_dblylst **stack_b, int times);
+void		rrr(t_dblylst **stack_a, t_dblylst **stack_b, int times);
+int			swap(t_dblylst **stack);
+void		sa(t_dblylst **stack_a, int times);
+void		sb(t_dblylst **stack_b, int times);
+void		ss(t_dblylst **stack_a, t_dblylst **stack_b, int times);
+int			push(t_dblylst **stack_x, t_dblylst **stack_y);
+void		pa(t_dblylst **stack_a, t_dblylst **stack_b, int times);
+void		pb(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 
-// TRANSFER_SORT //
+// SORT //
 
-void			transfer(t_dblylst **stack_a, t_dblylst **stack_b, int position);
-void			transfer_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
+void		sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
+void		little_sort(t_dblylst **stack_a, t_array ordered);
+void		big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
+void		cost_reset(t_dblylst **stack_a);
+
+// CALCULATE COST //
+
+void		calculate_cost(t_dblylst **stack_a, t_dblylst **stack_b);
+void		get_moves(t_dblylst *stack_a, t_dblylst **stack_b, int a_size);
+void		economize(t_dblylst *stack_a, int a_size, int b_size, int eco);
+void		get_min(t_dblylst *stack_a, t_dblylst **stack_b);
+void		get_max(t_dblylst *stack_a, t_dblylst **stack_b);
+
+// TRANSFER A //
+
+// ORGANIZE B //
+
+void		organize_b(t_dblylst **stack_b);
+int			get_pos(t_dblylst **stack_b, int biggest);
+int			get_biggest(t_dblylst **stack_b);
+
+// TRANSFER B //
+
+void		transfer_b(t_dblylst **stack_a, t_dblylst **stack_b);
+void		ab_rrot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap);
+void		ab_rot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap);
+t_dblylst	*get_cheapest(t_dblylst **stack_a);
 
 #endif

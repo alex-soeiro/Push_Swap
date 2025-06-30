@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/28 18:35:07 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/30 01:24:00 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,16 @@ void	print_stack(t_dblylst *stack)
 	ft_printf("%i\n", *(int *) stack_iter->content);
 }
 
-int	is_ordered(t_array ordered, t_dblylst *stack_a)
+int	is_ordered(t_array ordered, t_dblylst *stack)
 {
 	int	i;
 
 	i = 0;
 	while (i < ordered.length)
 	{
-		if (ordered.i_array[i++] != *(int *) stack_a->content)
+		if (ordered.i_array[i++] != *(int *) stack->content)
 			return (0);
-		stack_a = stack_a->next;
+		stack = stack->next;
 	}
 	return (1);
 }
@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 		print_stack(stack_a);
 		return (free(ordered.i_array), ft_dblylst_clear(stack_a), 0);
 	}
-	transfer_sort(&stack_a, &stack_b, ordered);
+	sort(&stack_a, &stack_b, ordered);
 	print_stack(stack_a);
 	ft_dblylst_clear(stack_a);
 	free(ordered.i_array);
