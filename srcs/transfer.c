@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   transfer_b.c                                       :+:      :+:    :+:   */
+/*   transfer.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 12:40:19 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 16:01:19 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,19 @@ void	transfer_b(t_dblylst **stack_a, t_dblylst **stack_b)
 		(ra(stack_a, cheap->pos), rrb(stack_b, b_size - cheap->target_pos));
 	else if (cheap->pos > a_size / 2 && cheap->target_pos <= b_size / 2)
 		(rrb(stack_a, a_size - cheap->pos), rrb(stack_b, cheap->target_pos));
+	pb(stack_a, stack_b, 1);
+}
+
+void	transfer_a(t_dblylst **stack_a, t_dblylst **stack_b)
+{
+	int	a_size;
+	int	a_pos;
+
+	a_size = ft_dblylst_size(*stack_a);
+	a_pos = (*stack_b)->pos;
+	if (a_pos <= a_size / 2)
+		ra(stack_a, a_pos);
+	else if (a_pos > a_size / 2)
+		ra(stack_a, a_size - a_pos);
 	pb(stack_a, stack_b, 1);
 }

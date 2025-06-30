@@ -6,20 +6,20 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 BUFFER_SIZE	include/libft/include/libft.h	24;"	d
 LIBFT_H	include/libft/include/libft.h	14;"	d
-PA	include/push_swap.h	23;"	d
-PB	include/push_swap.h	24;"	d
+PA	include/push_swap.h	22;"	d
+PB	include/push_swap.h	23;"	d
 PUSH_SWAP_H	include/push_swap.h	14;"	d
-RA	include/push_swap.h	25;"	d
-RB	include/push_swap.h	26;"	d
-RRA	include/push_swap.h	28;"	d
-RRB	include/push_swap.h	29;"	d
-RRR	include/push_swap.h	30;"	d
-RR	include/push_swap.h	27;"	d
-SA	include/push_swap.h	20;"	d
-SB	include/push_swap.h	21;"	d
-SS	include/push_swap.h	22;"	d
-ab_rot	srcs/transfer_b.c	/^void	ab_rot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap)$/;"	f
-ab_rrot	srcs/transfer_b.c	/^void	ab_rrot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap)$/;"	f
+RA	include/push_swap.h	24;"	d
+RB	include/push_swap.h	25;"	d
+RRA	include/push_swap.h	27;"	d
+RRB	include/push_swap.h	28;"	d
+RRR	include/push_swap.h	29;"	d
+RR	include/push_swap.h	26;"	d
+SA	include/push_swap.h	19;"	d
+SB	include/push_swap.h	20;"	d
+SS	include/push_swap.h	21;"	d
+ab_rot	srcs/transfer.c	/^void	ab_rot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap)$/;"	f
+ab_rrot	srcs/transfer.c	/^void	ab_rrot(t_dblylst **stack_a, t_dblylst **stack_b, t_dblylst *cheap)$/;"	f
 big_sort	srcs/sort.c	/^void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)$/;"	f
 c_array	include/libft/include/libft.h	/^	char			*c_array;$/;"	m	struct:s_array
 calculate_cost	srcs/calc_cost.c	/^void	calculate_cost(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f
@@ -104,11 +104,12 @@ ft_toupper	include/libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_writeline	include/libft/srcs/get_next_line.c	/^char	*ft_writeline(char *line, char *buf)$/;"	f
 get_amax	srcs/get_btarget.c	/^void	get_amax(t_dblylst **stack_a, t_dblylst *stack_b)$/;"	f
 get_amin	srcs/get_btarget.c	/^void	get_amin(t_dblylst **stack_a, t_dblylst *stack_b)$/;"	f
+get_big_a	srcs/sort.c	/^int	get_big_a(t_dblylst **stack_a)$/;"	f
 get_biggest	srcs/organize_b.c	/^int	get_biggest(t_dblylst **stack_b)$/;"	f
 get_bmax	srcs/calc_cost.c	/^void	get_bmax(t_dblylst *stack_a, t_dblylst **stack_b)$/;"	f
 get_bmin	srcs/calc_cost.c	/^void	get_bmin(t_dblylst *stack_a, t_dblylst **stack_b)$/;"	f
 get_btarget	srcs/get_btarget.c	/^void	get_btarget(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f
-get_cheapest	srcs/transfer_b.c	/^t_dblylst	*get_cheapest(t_dblylst **stack_a)$/;"	f
+get_cheapest	srcs/transfer.c	/^t_dblylst	*get_cheapest(t_dblylst **stack_a)$/;"	f
 get_moves	srcs/calc_cost.c	/^void	get_moves(t_dblylst *stack_a, t_dblylst **stack_b, int a_size)$/;"	f
 get_next_line	include/libft/srcs/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
 get_pos	srcs/organize_b.c	/^int	get_pos(t_dblylst **stack_b, int biggest)$/;"	f
@@ -169,4 +170,5 @@ t_list	include/libft/include/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
 t_tmp	include/push_swap.h	/^}	t_tmp;$/;"	t	typeref:struct:s_tmp
 target_pos	include/libft/include/libft.h	/^	int					target_pos;$/;"	m	struct:s_dblylst
 target	include/libft/include/libft.h	/^	struct s_dblylst	*target;$/;"	m	struct:s_dblylst	typeref:struct:s_dblylst::s_dblylst
-transfer_b	srcs/transfer_b.c	/^void	transfer_b(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f
+transfer_a	srcs/transfer.c	/^void	transfer_a(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f
+transfer_b	srcs/transfer.c	/^void	transfer_b(t_dblylst **stack_a, t_dblylst **stack_b)$/;"	f

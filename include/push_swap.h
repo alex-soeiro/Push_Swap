@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 11:16:10 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 16:11:51 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../include/libft/include/libft.h"
-
 # define SA "sa\n"
 # define SB "sb\n"
 # define SS "ss\n"
@@ -85,7 +84,15 @@ void		economize(t_dblylst *stack_a, int a_size, int b_size, int eco);
 void		get_bmin(t_dblylst *stack_a, t_dblylst **stack_b);
 void		get_bmax(t_dblylst *stack_a, t_dblylst **stack_b);
 
+// GET B TARGET //
+
+void		get_btarget(t_dblylst **stack_a, t_dblylst **stack_b);
+void		get_amin(t_dblylst **stack_a, t_dblylst *stack_b);
+void		get_amax(t_dblylst **stack_a, t_dblylst *stack_b);
+
 // TRANSFER A //
+
+void    transfer_a(t_dblylst **stack_a, t_dblylst **stack_b);
 
 // ORGANIZE B //
 

@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:15:37 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/28 23:00:46 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/06/30 15:29:21 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	push(t_dblylst **stack_x, t_dblylst **stack_y)
 
 void	pb(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 {
-	while (times--)
+	while (--times)
 	{
 		if (push(stack_a, stack_b))
 			ft_printstr(PB);
@@ -76,7 +76,7 @@ void	pb(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 
 void	pa(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 {
-	while (times--)
+	while (--times)
 	{
 		if (push(stack_b, stack_a))
 			ft_printstr(PA);

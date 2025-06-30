@@ -6,13 +6,15 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 13:49:06 by avieira-	       #+#    #+#              #
-#    Updated: 2025/06/30 01:21:03 by a-soeiro         ###   ########.fr        #
+#    Updated: 2025/06/30 16:12:51 by a-soeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
-SRCS = srcs/push_swap.c srcs/parse.c srcs/error_message.c srcs/createstack_a.c srcs/rotate.c srcs/calc_cost.c srcs/organize_b.c srcs/transfer_b.c srcs/sort.c
+SRCS = srcs/push_swap.c srcs/parse.c srcs/error_message.c srcs/createstack_a.c
+SRCS += srcs/rotate.c srcs/calc_cost.c srcs/organize_b.c srcs/transfer.c
+SRCS += srcs/get_btarget.c srcs/sort.c
 SRCS += srcs/reverse_rotate.c srcs/swap.c srcs/push.c
 OBJS += $(SRCS:.c=.o)
 
