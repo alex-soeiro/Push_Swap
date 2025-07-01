@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/01 00:15:57 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/01 02:46:06 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,9 @@ int	main(int argc, char **argv)
 	ordered = normalize(argc, argv);
 	stack_a = createstack_a(nums);
 	if (is_ordered(ordered, stack_a))
-	{
-		print_stack(stack_a);
 		return (free(ordered.i_array), ft_dblylst_clear(stack_a), 0);
-	}
 	sort(&stack_a, &stack_b, ordered);
-	print_stack(stack_a);
+	//print_stack(stack_a);
 	ft_dblylst_clear(stack_a);
 	free(ordered.i_array);
 }

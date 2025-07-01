@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 11:02:39 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/01 01:59:27 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/01 02:17:53 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	get_moves(t_dblylst *stack_a, t_dblylst **stack_b, int a_size)
 		&& stack_a->target_pos > b_size / 2)
 		economize(stack_a, a_size, b_size, 2);
 	else if (stack_a->pos <= a_size / 2 && stack_a->target_pos > b_size / 2)
-		stack_a->moves = stack_a->target_pos + b_size - stack_a->target_pos;
+		stack_a->moves = stack_a->pos + b_size - stack_a->target_pos;
 	else if (stack_a->pos > a_size / 2 && stack_a->target_pos <= b_size / 2)
 		stack_a->moves = a_size - stack_a->pos + stack_a->target_pos;
 }

@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 12:15:46 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/01 00:50:03 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/01 02:33:49 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ void	cost_reset(t_dblylst **stack)
 	stack_iter = *stack;
 	while (size--)
 	{
+		stack_iter->pos = 0;
 		stack_iter->moves = 0;
+		stack_iter->target_pos = 0;
 		stack_iter = stack_iter->next;
 	}
 }
@@ -85,8 +87,8 @@ void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	{
 		get_btarget(stack_a, stack_b);
 		transfer_a(stack_a, stack_b);
-		organize_a(stack_a);
 	}
+	organize_a(stack_a);
 }
 
 void	sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
