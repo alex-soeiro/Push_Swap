@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 16:01:19 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 21:30:45 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,12 +96,14 @@ void	transfer_a(t_dblylst **stack_a, t_dblylst **stack_b)
 {
 	int	a_size;
 	int	a_pos;
+	int	content;
 
 	a_size = ft_dblylst_size(*stack_a);
-	a_pos = (*stack_b)->pos;
+	content = *(int *) (*stack_b)->target->content;
+	a_pos = get_pos(stack_a, content);
 	if (a_pos <= a_size / 2)
 		ra(stack_a, a_pos);
 	else if (a_pos > a_size / 2)
-		ra(stack_a, a_size - a_pos);
-	pb(stack_a, stack_b, 1);
+		rra(stack_a, a_size - a_pos);
+	pa(stack_a, stack_b, 1);
 }

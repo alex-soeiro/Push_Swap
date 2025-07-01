@@ -6,23 +6,23 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 13:49:06 by avieira-	       #+#    #+#              #
-#    Updated: 2025/06/30 16:12:51 by a-soeiro         ###   ########.fr        #
+#    Updated: 2025/06/30 17:45:24 by a-soeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 SRCS = srcs/push_swap.c srcs/parse.c srcs/error_message.c srcs/createstack_a.c
-SRCS += srcs/rotate.c srcs/calc_cost.c srcs/organize_b.c srcs/transfer.c
-SRCS += srcs/get_btarget.c srcs/sort.c
+SRCS += srcs/rotate.c srcs/calc_cost.c srcs/organize.c srcs/organize_utils.c
+SRCS += srcs/get_btarget.c srcs/sort.c srcs/transfer.c
 SRCS += srcs/reverse_rotate.c srcs/swap.c srcs/push.c
 OBJS += $(SRCS:.c=.o)
 
 all: $(NAME)
 
-compile: libft $(NAME) $(OBJS)
+compile: fclean libft $(NAME) $(OBJS)
 	cc $(CFLAGS) $(SRCS) include/libft/libft.a -g -o $(NAME)
-	rm -rf include/libft/srcs/*.o
+	rm -rf $(OBJS)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)

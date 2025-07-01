@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 16:11:51 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/06/30 20:59:12 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,18 +87,20 @@ void		get_bmax(t_dblylst *stack_a, t_dblylst **stack_b);
 // GET B TARGET //
 
 void		get_btarget(t_dblylst **stack_a, t_dblylst **stack_b);
-void		get_amin(t_dblylst **stack_a, t_dblylst *stack_b);
-void		get_amax(t_dblylst **stack_a, t_dblylst *stack_b);
+void		get_amin(t_dblylst **stack_a, t_dblylst **stack_b);
+void		get_amax(t_dblylst **stack_a, t_dblylst **stack_b);
 
 // TRANSFER A //
 
 void    transfer_a(t_dblylst **stack_a, t_dblylst **stack_b);
 
-// ORGANIZE B //
+// ORGANIZE //
 
 void		organize_b(t_dblylst **stack_b);
-int			get_pos(t_dblylst **stack_b, int biggest);
-int			get_biggest(t_dblylst **stack_b);
+void		organize_a(t_dblylst **stack_a);
+int			get_pos(t_dblylst **stack, int biggest);
+int			get_biggest(t_dblylst **stack);
+int			get_smallest(t_dblylst **stack);
 
 // TRANSFER B //
 
