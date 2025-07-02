@@ -1,0 +1,119 @@
+
+########## TEST    1 ##########
+
+ARGS:
+-98984 -94209 -8107 
+
+OUTPUT:
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 0     
+
+########## TEST    2 ##########
+
+ARGS:
+-37220 -6390 -76983 
+
+OUTPUT:
+rra
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 1     
+
+########## TEST    3 ##########
+
+ARGS:
+-53318 -113581 -53044 
+
+OUTPUT:
+sa
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 1     
+
+########## TEST    4 ##########
+
+ARGS:
+-84185 -62782 -36393 
+
+OUTPUT:
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 0     
+
+########## TEST    5 ##########
+
+ARGS:
+-79357 -94688 -19046 
+
+OUTPUT:
+sa
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 1     
+
+########## TEST    6 ##########
+
+ARGS:
+-54825 -11342 -75777 
+
+OUTPUT:
+rra
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 1     
+
+########## TEST    7 ##########
+
+ARGS:
+-36742 -5519 -79690 
+
+OUTPUT:
+rra
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 1     
+
+########## TEST    8 ##########
+
+ARGS:
+-36574 -27255 -35885 
+
+OUTPUT:
+rra
+sa
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 2     
+
+########## TEST    9 ##########
+
+ARGS:
+-33377 -17224 18529 
+
+OUTPUT:
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 0     
+
+########## TEST   10 ##########
+
+ARGS:
+-38066 -80914 21706 
+
+OUTPUT:
+sa
+
+CHECKERS:
+mac: N/A, lnx: N/A
+MOVES: 1     
+
