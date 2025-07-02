@@ -6,7 +6,7 @@
 /*   By: a-soeiro <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 22:27:30 by a-soeiro          #+#    #+#             */
-/*   Updated: 2025/06/30 18:22:40 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 02:02:30 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	organize_b(t_dblylst **stack_b)
 
 void	organize_a(t_dblylst **stack_a)
 {
-	int	a_size;
-	int	smallest;
-	int	smallest_pos;
-
+	int			a_size;
+	int			smallest;
+	int			smallest_pos;
+	
 	smallest = get_smallest(stack_a);
 	a_size = ft_dblylst_size(*stack_a);
 	smallest_pos = get_pos(stack_a, smallest);

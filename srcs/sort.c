@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 12:15:46 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/01 02:33:49 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 01:59:01 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	cost_reset(t_dblylst **stack)
 		stack_iter->pos = 0;
 		stack_iter->moves = 0;
 		stack_iter->target_pos = 0;
+		stack_iter->target = NULL;
 		stack_iter = stack_iter->next;
 	}
 }
