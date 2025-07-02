@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:57:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 01:39:39 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 00:13:38 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	swap(t_dblylst **stack)
 	(*stack)->next->prev = tmp.n_1;
 	(*stack)->next->next = tmp.n_2;
 	(*stack)->prev->next = tmp.n_3;
+	(*stack)->prev->prev = tmp.n_2;
 	(*stack)->next = tmp.n_4;
 	(*stack)->prev = tmp.n_3;
 	(*stack) = tmp.n_3;
