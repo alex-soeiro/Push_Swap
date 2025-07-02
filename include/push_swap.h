@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 20:59:12 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 16:48:04 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ void		pb(t_dblylst **stack_a, t_dblylst **stack_b, int times);
 
 // SORT //
 
-void		sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
-void		little_sort(t_dblylst **stack_a, t_array ordered);
-void		big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered);
+void		sort(t_dblylst **stack_a, t_dblylst **stack_b);
+void		little_sort(t_dblylst **stack_a);
+void		big_sort(t_dblylst **stack_a, t_dblylst **stack_b);
 void		cost_reset(t_dblylst **stack);
 
 // CALCULATE COST //

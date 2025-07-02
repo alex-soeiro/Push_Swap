@@ -6,27 +6,11 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:11:01 by avieira-          #+#    #+#             */
-/*   Updated: 2025/04/19 14:06:19 by jesusoncrac      ###   ########.fr       */
+/*   Updated: 2025/07/02 19:48:07 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
-
-static int	ft_countwords(char const *s, char c)
-{
-	int	i;
-	int	word;
-
-	i = 0;
-	word = 0;
-	while (s[i])
-	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			word++;
-		i++;
-	}
-	return (word);
-}
 
 static char	**ft_clear(char **split, int i)
 {
@@ -42,7 +26,7 @@ static char	**ft_clear(char **split, int i)
 	return (NULL);
 }
 
-static char	**ft_populate(char **split, char const *s, char sep, int words)
+static char	**ft_populate(char **split, char *s, char sep, int words)
 {
 	int		i;
 	int		len;
@@ -67,7 +51,7 @@ static char	**ft_populate(char **split, char const *s, char sep, int words)
 	return (split);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	int		words;
 	char	**split;

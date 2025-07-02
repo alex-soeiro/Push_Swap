@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 12:15:46 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 01:59:01 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:25:24 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,10 @@ int	get_big_a(t_dblylst **stack_a)
 	return (big_a);
 }
 
-void	little_sort(t_dblylst **stack_a, t_array ordered)
+void	little_sort(t_dblylst **stack_a)
 {
 	int			big_a;
 
-	if (is_ordered(ordered, *stack_a))
-		return ;
 	big_a = get_big_a(stack_a);
 	if (*(int *)(*stack_a)->content == big_a)
 		ra(stack_a, 1);
@@ -63,18 +61,19 @@ void	little_sort(t_dblylst **stack_a, t_array ordered)
 		sa(stack_a, 1);
 }
 
-void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
+void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b)
 {
 	int	a_size;
 	int	b_size;
 
 	a_size = ft_dblylst_size(*stack_a);
-	if (a_size < 4)
-		return (little_sort(stack_a, ordered));
 	if (a_size == 4)
 		pb(stack_a, stack_b, 1);
 	else
-		(pb(stack_a, stack_b, 2), a_size--);
+	{
+		pb(stack_a, stack_b, 2);
+		a_size--;
+	}
 	a_size--;
 	while (a_size-- > 3)
 	{
@@ -82,7 +81,7 @@ void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 		transfer_b(stack_a, stack_b);
 		cost_reset(stack_a);
 	}
-	little_sort(stack_a, ordered);
+	little_sort(stack_a);
 	b_size = ft_dblylst_size(*stack_b);
 	while (b_size--)
 	{
@@ -92,7 +91,7 @@ void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	organize_a(stack_a);
 }
 
-void	sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
+void	sort(t_dblylst **stack_a, t_dblylst **stack_b)
 {
 	int	a_size;
 
@@ -100,7 +99,7 @@ void	sort(t_dblylst **stack_a, t_dblylst **stack_b, t_array ordered)
 	if (a_size == 2)
 		sa(stack_a, 1);
 	else if (a_size == 3)
-		little_sort(stack_a, ordered);
+		little_sort(stack_a);
 	else if (a_size > 3)
-		big_sort(stack_a, stack_b, ordered);
+		big_sort(stack_a, stack_b);
 }

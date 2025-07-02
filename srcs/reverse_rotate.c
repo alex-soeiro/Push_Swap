@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 17:31:02 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 00:13:44 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:40:36 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	rrr(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 	{
 		reverse_rotate(stack_a);
 		reverse_rotate(stack_b);
-		if (*stack_a || *stack_b)
-			ft_printstr(RRR);
+		ft_printstr(RRR);
 	}
 }

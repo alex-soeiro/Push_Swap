@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:40:13 by avieira-          #+#    #+#             */
-/*   Updated: 2025/06/30 15:27:45 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:40:19 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	rr(t_dblylst **stack_a, t_dblylst **stack_b, int times)
 	{
 		rotate(stack_a);
 		rotate(stack_b);
-		if (*stack_a || *stack_b)
-			ft_printstr(RR);
+		ft_printstr(RR);
 	}
 }

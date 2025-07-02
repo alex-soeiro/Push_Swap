@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 02:39:22 by a-soeiro         ###   ########.fr       */
+/*   Updated: 2025/07/02 20:53:12 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,26 @@
 #include "../include/push_swap.h"
 #include "../include/libft/include/libft.h"
 
-t_array	normalize(int argc, char **argv)
+int	count_numbers(char **nums)
+{
+	int	number_count;
+	
+	number_count = 0;
+	while (*nums)
+		number_count += ft_strlen(*(nums++));
+	return (number_count);
+}
+
+t_array	normalize(char **nums)
 {
 	int		i;
-	int		j;
 	t_array	middle;
 
-	i = 1;
-	j = 0;
-	middle.length = argc - 1;
-	middle.i_array = malloc((argc - 1) * sizeof(int));
-	while (i < argc)
-		middle.i_array[j++] = ft_atoi(argv[i++]);
+	i = 0;
+	middle.length = count_numbers(nums);
+	middle.i_array = malloc((middle.length) * sizeof(int));
+	while (i < middle.length)
+		middle.i_array[i++] = ft_atoi(*(nums++));
 	i = 0;
 	i_merge_sort(middle);
 	return (middle);
@@ -73,11 +81,11 @@ int	main(int argc, char **argv)
 	parsing_ko = parse(argc, argv, &nums);
 	if (parsing_ko)
 		return (parsing_ko);
-	ordered = normalize(argc, argv);
+	ordered = normalize(nums);
 	stack_a = createstack_a(nums);
 	if (is_ordered(ordered, stack_a))
 		return (free(ordered.i_array), ft_dblylst_clear(stack_a), 0);
-	sort(&stack_a, &stack_b, ordered);
+	sort(&stack_a, &stack_b);
 	//print_stack(stack_a);
 	ft_dblylst_clear(stack_a);
 	free(ordered.i_array);
