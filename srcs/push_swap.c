@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 20:53:12 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/07/02 21:05:47 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	count_numbers(char **nums)
 	int	number_count;
 	
 	number_count = 0;
-	while (*nums)
-		number_count += ft_strlen(*(nums++));
+	while (nums[number_count])
+		number_count++;
 	return (number_count);
 }
 
