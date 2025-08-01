@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:04:17 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 18:36:29 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/08/01 03:18:03 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ t_dblylst	*get_cheapest(t_dblylst **stack_a)
 	stack_a_iter = *stack_a;
 	cheapest = stack_a_iter;
 	a_size = ft_dblylst_size(*stack_a);
-//	if (stack_a_iter->moves == 1)
-//		return (stack_a_iter);
 	while (a_size--)
 	{
 		if (stack_a_iter->moves < cheapest->moves)
@@ -93,7 +91,7 @@ void	transfer_b(t_dblylst **stack_a, t_dblylst **stack_b)
 	else if (cheap->pos > a_size / 2 && cheap->target_pos <= b_size / 2)
 	{
 		rra(stack_a, a_size - cheap->pos);
- 		rb(stack_b, cheap->target_pos);
+		rb(stack_b, cheap->target_pos);
 	}
 	pb(stack_a, stack_b, 1);
 }

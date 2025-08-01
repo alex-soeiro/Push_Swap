@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:27:06 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 21:05:47 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/08/01 03:17:04 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	count_numbers(char **nums)
 {
 	int	number_count;
-	
+
 	number_count = 0;
 	while (nums[number_count])
 		number_count++;
@@ -86,7 +86,6 @@ int	main(int argc, char **argv)
 	if (is_ordered(ordered, stack_a))
 		return (free(ordered.i_array), ft_dblylst_clear(stack_a), 0);
 	sort(&stack_a, &stack_b);
-	//print_stack(stack_a);
 	ft_dblylst_clear(stack_a);
 	free(ordered.i_array);
 }

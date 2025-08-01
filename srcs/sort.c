@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 12:15:46 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 17:25:24 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/08/01 03:19:26 by a-soeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,7 @@ void	big_sort(t_dblylst **stack_a, t_dblylst **stack_b)
 		pb(stack_a, stack_b, 2);
 		a_size--;
 	}
-	a_size--;
-	while (a_size-- > 3)
+	while (--a_size > 3)
 	{
 		calculate_cost(stack_a, stack_b);
 		transfer_b(stack_a, stack_b);
