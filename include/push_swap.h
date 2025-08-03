@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:45 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 16:48:04 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/08/03 18:07:28 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void		get_amax(t_dblylst **stack_a, t_dblylst **stack_b);
 
 // TRANSFER A //
 
-void    transfer_a(t_dblylst **stack_a, t_dblylst **stack_b);
+void		transfer_a(t_dblylst **stack_a, t_dblylst **stack_b);
 
 // ORGANIZE //
 
