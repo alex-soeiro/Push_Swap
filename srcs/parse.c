@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 17:34:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/07/02 18:55:34 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/08/04 19:40:29 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	is_only_numbers(char **nums)
 	{
 		j = 0;
 		num_len = ft_strlen(nums[i]);
-		while (j < num_len && nums[i][j] && ft_issign(nums[i][j]))
+		if (j < num_len && nums[i][j] && ft_issign(nums[i][j]))
 			j++;
 		while (j < num_len && ft_isdigit(nums[i][j]))
 			j++;

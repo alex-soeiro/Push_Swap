@@ -6,7 +6,7 @@
 #    By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 13:49:06 by avieira-	       #+#    #+#              #
-#    Updated: 2025/08/03 18:06:19 by a-soeiro         ###   ########.fr        #
+#    Updated: 2025/08/04 22:07:09 by avieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJS += $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): libft $(OBJS)
+$(NAME): $(LIBFT) $(OBJS)
 	cc $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
 %.o: %.c
@@ -33,7 +33,7 @@ clean:
 fclean: clean fclean_libft
 	rm -f $(NAME)
 
-libft:
+$(LIBFT):
 	make -C include/libft/
 
 clean_libft:
