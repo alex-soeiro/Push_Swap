@@ -6,7 +6,7 @@
 /*   By: avieira- <avieira-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 17:34:35 by avieira-          #+#    #+#             */
-/*   Updated: 2025/08/04 19:40:29 by avieira-         ###   ########.fr       */
+/*   Updated: 2025/08/05 23:14:44 by avieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int	parse(int argc, char **argv, char ***nums)
 	if (!is_only_numbers(*nums))
 		return (ft_free_matrix(*nums), error_message(4));
 	if (!ft_is_int(*nums))
-		return (error_message(5));
+		return (ft_free_matrix(*nums), error_message(5));
 	if (is_repeated_number(*nums))
 		return (ft_free_matrix(*nums), error_message(5));
 	return (0);
